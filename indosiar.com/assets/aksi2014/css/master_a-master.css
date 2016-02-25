@@ -1,0 +1,49 @@
+#u334
+{
+	position: relative;
+}
+
+#u352
+{
+	position: relative;
+	background: transparent url("../images/persyaratan-button.png") no-repeat left top;
+	background-size: contain !important;
+}
+
+#u352:hover
+{
+	background: transparent url("../images/persyaratan-button2.png") no-repeat left top;
+	background-size: contain !important;
+}
+
+#u352:active
+{
+	background: transparent url("../images/persyaratan-button3.png") no-repeat left top;
+	background-size: contain !important;
+}
+
+#u352.MuseLinkActive
+{
+	background: transparent url("../images/persyaratan-button2.png") no-repeat left top;
+	background-size: contain !important;
+}
+
+#u456
+{
+	position: relative;
+	background: transparent url("../images/persyaratan-button4.png") no-repeat left top;
+	background-size: contain !important;
+}
+
+#u456:hover
+{
+	background: transparent url("../images/persyaratan-button5.png") no-repeat left top;
+	background-size: contain !important;
+}
+
+#u456.MuseLinkActive
+{
+	background: transparent url("../images/persyaratan-button5.png") no-repeat left top;
+	background-size: contain !important;
+}
+

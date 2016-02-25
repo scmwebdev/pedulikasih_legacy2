@@ -1,0 +1,115 @@
+.html
+{
+	background: #7F7F7F url("../images/bg2.png") no-repeat center top scroll;
+	background-size: cover !important;
+}
+
+#page
+{
+	z-index: 1;
+	width: 1000px;
+	min-height: 587px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#pu334
+{
+	width: 0.01px;
+	padding-bottom: 0px;
+	position: relative;
+	margin-right: -10000px;
+	left: 201px;
+}
+
+#u334
+{
+	z-index: 2;
+	width: 342px;
+	margin-left: 128px;
+}
+
+#pu233
+{
+	width: 0.01px;
+	margin-top: 26px;
+	position: relative;
+}
+
+#u233
+{
+	z-index: 6;
+	width: 597px;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#u238-4
+{
+	z-index: 8;
+	width: 589px;
+	min-height: 88px;
+	line-height: 22px;
+	color: #3E96C4;
+	text-align: center;
+	font-size: 18px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 43px;
+	left: 4px;
+}
+
+#u352
+{
+	z-index: 4;
+	width: 140px;
+	height: 140px;
+	margin-bottom: -116px;
+	margin-right: -10000px;
+	margin-top: 614px;
+	left: 250px;
+}
+
+#u352:hover
+{
+	margin: 614px -10000px -116px 0px;
+}
+
+#u352:active
+{
+	margin: 614px -10000px -116px 0px;
+}
+
+#u456
+{
+	z-index: 5;
+	width: 140px;
+	height: 140px;
+	margin-bottom: -116px;
+	margin-right: -10000px;
+	margin-top: 614px;
+	left: 611px;
+}
+
+#u352.MuseLinkActive,#u456:hover
+{
+	margin: 614px -10000px -116px 0px;
+}
+
+#u456.MuseLinkActive
+{
+	margin: 614px -10000px -116px 0px;
+}
+
+body
+{
+	padding-top: 36px;
+	padding-bottom: 134px;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+	margin-bottom: -614px;
+}
+

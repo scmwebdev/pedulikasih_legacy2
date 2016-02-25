@@ -1,0 +1,113 @@
+.html
+{
+	background: #7F7F7F url("../images/bg2.jpg") no-repeat left top scroll;
+	background-size: cover !important;
+}
+
+#page
+{
+	z-index: 1;
+	width: 960px;
+	min-height: 573px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#pu85
+{
+	width: 0.01px;
+	left: -19px;
+	position: relative;
+}
+
+#u85
+{
+	z-index: 4;
+	width: 72px;
+	margin-right: -10000px;
+}
+
+#u80
+{
+	z-index: 2;
+	width: 317px;
+	margin-right: -10000px;
+	margin-top: 20px;
+	left: 340px;
+}
+
+#u95
+{
+	z-index: 8;
+	width: 713px;
+	margin-left: 124px;
+	margin-top: 32px;
+	position: relative;
+}
+
+#u100
+{
+	z-index: 10;
+	width: 466px;
+	margin-left: 247px;
+	margin-top: 42px;
+	position: relative;
+}
+
+#u105
+{
+	z-index: 12;
+	width: 314px;
+	margin-left: 323px;
+	margin-top: 42px;
+	position: relative;
+}
+
+#u110
+{
+	z-index: 14;
+	width: 369px;
+	margin-left: 295px;
+	margin-top: 42px;
+	position: relative;
+}
+
+#u193
+{
+	z-index: 16;
+	width: 120px;
+	height: 120px;
+	margin-left: 420px;
+	margin-top: 10px;
+	position: relative;
+	background: transparent url("../images/button.png") no-repeat left top;
+	background-size: contain !important;
+}
+
+#u193:hover
+{
+	margin: 10px 0px 0px 420px;
+	background: transparent url("../images/button2.png") no-repeat left top;
+	background-size: contain !important;
+}
+
+#u286
+{
+	z-index: 6;
+	width: 572px;
+	margin-left: 388px;
+	top: -269px;
+	margin-bottom: -269px;
+	position: relative;
+}
+
+body
+{
+	padding-top: 12px;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+}
+
