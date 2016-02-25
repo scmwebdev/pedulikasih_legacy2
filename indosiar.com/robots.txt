@@ -1,0 +1,12 @@
+User-agent: *
+Sitemap: http://www.indosiar.com/sitemap.xml
+Sitemap: http://www.indosiar.com/sitemap-fokus.xml
+Sitemap: http://www.indosiar.com/sitemap-patroli.xml
+Sitemap: http://www.indosiar.com/sitemap-ragam.xml
+Sitemap: http://www.indosiar.com/sitemap-sinopsis.xml
+Sitemap: http://www.indosiar.com/sitemap-gossip.xml
+Sitemap: http://www.indosiar.com/sitemap-talk-show.xml
+Sitemap: http://www.indosiar.com/sitemap-safari-resep.xml
+Sitemap: http://www.indosiar.com/sitemap-berita-terkini.xml
+Sitemap: http://www.indosiar.com/sitemap-budaya.xml
+Sitemap: http://www.indosiar.com/sitemap-videofiesta.xml
