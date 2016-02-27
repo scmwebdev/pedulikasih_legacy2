@@ -47,7 +47,7 @@ background: black;
 
 <div style="float:left;width:200px;margin-right:20px;">
 	<div class="urbangreymenu" style="margin-top:10px">
-		<a href="/pedulikasih"><img src="<?=$this->config->item('URL_IMAGES')?>pedulikasih.jpg" alt="Peduli Kasih" border="0" /></a>
+		<a href="/pedulikasih"><img src="<?php $this->config->item('URL_IMAGES')?>pedulikasih.jpg" alt="Peduli Kasih" border="0" /></a>
 		<ul>
 			<li><b>LAPORAN KEUANGAN</b></li>
 			<li><a href="/pedulikasih/bcaperorangan">Transfer BCA Perorangan</a></li>

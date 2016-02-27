@@ -1,4 +1,4 @@
-<?php
+<?php php
 $batas = 5;
 $segment=4;
 $spage = "";
@@ -21,7 +21,7 @@ include (APPPATH."views/pedulikasih/pk_top.php");
 	<div class="JudulArtikel">Berita Peduli Kasih</div>
 	<p>&nbsp;</p>
 
-<?
+<?php 
 /*
 if ($page == "" || !is_numeric($page)) $page = 1;
 $strlimit = ($page == 1) ? " limit 0, $batas" : " limit ". $page .", $batas";

@@ -11,7 +11,7 @@ include (APPPATH."views/pedulikasih/pk_top.php");
 	<div class="JudulArtikel">Berita Peduli Kasih</div>
 	<p>&nbsp;</p>
 
-<?
+<?php
 $batas = 5;
 $segment=4;
 $page = trim($this->uri->segment(4));
