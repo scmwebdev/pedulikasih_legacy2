@@ -1,4 +1,4 @@
-<?php
+<?php 
 $batas = 5;
 $segment=4;
 $spage = "";
@@ -20,7 +20,7 @@ include (APPPATH."views/kitapeduli/header.php");
 	<h1>Berita Kita Peduli</h1>
 	<p>&nbsp;</p>
 
-<?
+<?php 
 $batas = 5;
 $segment=4;
 $page = trim($this->uri->segment(4));

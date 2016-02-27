@@ -20,13 +20,13 @@ include (APPPATH."views/inc_header.php");
 </div>
 <div style="float:left;width:200px;margin-right:20px;">
 	<div style="margin-bottom:15px"><a href="/kitapeduli"><img src="http://static.indosiar.com/images/kitapeduli.jpg" alt="Kita Peduli indosiar" title="Kita Peduli indosiar" border="0"/></a></div>
-	<?=$pk_menu?>
+	<?php $pk_menu?>
 	<br/>
     <div class="csr_programbox">
-        <div style="text-align:center;"><a href="<?=site_url('pedulikasih')?>"><img src="/assets/images/pedulikasih_logo.png" width="120" border="0" alt="Peduli Kasih" title="Program Peduli Kasih INDOSIAR" /></a></div>
-        <div class="csr_clickhere"><a href="<?=site_url('pedulikasih')?>">click here</a></div>
-        <div style="text-align:center"><a href="<?=site_url('pedulikomunitas')?>"><img src="/assets/images/pedulikomunitas_logo.jpg" width="100" border="0" alt="Peduli Komunitas" title="Program Peduli Komunitas INDOSIAR" /></a></div>
-        <div class="csr_clickhere" style="margin-bottom:0px;"><a href="<?=site_url('pedulikomunitas')?>">click here</a></div>
+        <div style="text-align:center;"><a href="<?php site_url('pedulikasih')?>"><img src="/assets/images/pedulikasih_logo.png" width="120" border="0" alt="Peduli Kasih" title="Program Peduli Kasih INDOSIAR" /></a></div>
+        <div class="csr_clickhere"><a href="<?php site_url('pedulikasih')?>">click here</a></div>
+        <div style="text-align:center"><a href="<?php site_url('pedulikomunitas')?>"><img src="/assets/images/pedulikomunitas_logo.jpg" width="100" border="0" alt="Peduli Komunitas" title="Program Peduli Komunitas INDOSIAR" /></a></div>
+        <div class="csr_clickhere" style="margin-bottom:0px;"><a href="<?php site_url('pedulikomunitas')?>">click here</a></div>
     </div>
 </div>
 <div style="float:right;width:700px;">

@@ -1,4 +1,4 @@
-<?
+<?php
 $qword = ($keyword == "") ? "" : " - ".$keyword;
 $spage = $upage = "";
 $batas = 10;

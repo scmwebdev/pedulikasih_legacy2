@@ -1,4 +1,4 @@
-<?
+<?php
 $batas = 10;
 $spage = $upage = "";
 $page = $this->uri->segment(4);

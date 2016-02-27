@@ -1,4 +1,4 @@
-<?
+<?php
 $HTMLPageTitle = "Annual Report - Corporate Info";
 $HTMLMetaDescription = "INDOSIAR Annual Report";
 $HTMLMetaKeywords = "Annual Report";
@@ -138,7 +138,7 @@ background-color: #efefef;
 
 <div class="RoundedBox5px" style="font-weight: bold; font-style: normal; font-variant: normal; font-size: 18px; line-height: normal; font-family: 'Lucida Sans', 'Lucida Grande', 'Trebuchet MS'; letter-spacing: 0px; color: rgb(255, 255, 255); background-color: rgb(78, 100, 104); padding: 5px 10px; margin-bottom: 10px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-position: initial initial; background-repeat: initial initial;">Corporate Information</div>
 <div style="float:left;width:200px;margin-right:20px;">
-<?=$menu?>
+<?php $menu?>
 </div>
 <div style="float:right;width:700px;">
     <h1>Annual Report</h1>
@@ -153,6 +153,6 @@ foreach($annualreport as $row) {
     <div style="clear:both"></div>
 </div>
 
-<?
+<?php
 include (APPPATH."views/inc_footer.php");
 ?>

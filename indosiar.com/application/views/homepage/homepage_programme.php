@@ -1,4 +1,4 @@
-<?
+<?php
 $HTMLPageTitle = "Informasi Terbaru Indonesia";
 $HTMLMetaDescription = "Informasi Terbaru Indonesia";
 $HTMLMetaKeywords = "Lautan Indonesia - Indonesian Portal Community";
@@ -11,7 +11,7 @@ include (APPPATH."views/inc_header.php");
       <div class="RoundedBox5px" style="float:left;width:260px;height:300px;padding:10px;background:#fff;"><div id="hlBOX"></div></div>
       <div style="float:left; width:310px;">
         <div style="padding:0 0 5px 10px;" class="JudulKanal">What's On The Week</div>
-<?
+<?php
 $strID = "";
 $i = 1;
 $query = $this->homepage_model->showWhatsOnTheWeek(2,$strID,4);
@@ -39,7 +39,7 @@ foreach ($query as $row)
     $i++;
 }
 ?>
-        <div style="margin:10px 0 0 10px"><a href="<?=site_url('jadwal-acara')?>"><img src="<?=$this->config->item('URL_IMG')?>v9-jadwal.gif" border="0" alt="jadwal acara" title="jadwal acara" /></a></div>
+        <div style="margin:10px 0 0 10px"><a href="<?php site_url('jadwal-acara')?>"><img src="<?php $this->config->item('URL_IMG')?>v9-jadwal.gif" border="0" alt="jadwal acara" title="jadwal acara" /></a></div>
       </div>
       <div style="clear:both"></div>
       <script type="text/javascript">
@@ -62,7 +62,7 @@ foreach ($query as $row)
   </div>
   <div style="float:left;width:300px;">
     <div class="RoundedBox5px" style="background:#B6B6B6;padding:10px;height:320px;">
-<?
+<?php
 $query = $this->homepage_model->showSinopsis($strID);
 foreach ($query as $row) {
         $strID .= " and id<>".$row['id'];
@@ -83,10 +83,10 @@ foreach ($query as $row) {
   <!-- START ROW 2 -->
   <div style="clear:both;padding-top:10px;"></div>
   <div style="float:left;width:300px;margin-right:10px;">
-    <div><a href="<?=site_url('gossip')?>"><img src="<?=$this->config->item('URL_IMG')?>v9-col-gossip.gif" border="0" alt="gossip" title="gossip" /></a></div>
+    <div><a href="<?php site_url('gossip')?>"><img src="<?php $this->config->item('URL_IMG')?>v9-col-gossip.gif" border="0" alt="gossip" title="gossip" /></a></div>
     <div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;" class="ListHomeJudul">
       <ul>
-<?
+<?php
 $query = $this->homepage_model->showArticleJenis(2,$strID);
 foreach ($query as $row) {
         $strID .= " and id<>".$row['id'];
@@ -97,7 +97,7 @@ foreach ($query as $row) {
       </ul>
       <div style="margin-top:5px">
         <b>Tags:</b> 
-<?
+<?php
 $query = $this->homepage_model->showArticleJenisTag(2);
 foreach ($query as $row) {
         $fontsize = rand(1, 5);
@@ -107,13 +107,13 @@ foreach ($query as $row) {
 ?>
       </div>
     </div>
-    <div><img src="<?=$this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+    <div><img src="<?php $this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
   </div>
   <div style="float:left;width:300px;margin-right:10px;">
-    <div><a href="<?=site_url('sinopsis')?>"><img src="<?=$this->config->item('URL_IMG')?>v9-col-sinopsis.gif" border="0" alt="sinopsis" title="sinopsis" /></a></div>
+    <div><a href="<?php site_url('sinopsis')?>"><img src="<?php $this->config->item('URL_IMG')?>v9-col-sinopsis.gif" border="0" alt="sinopsis" title="sinopsis" /></a></div>
     <div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;" class="ListHomeJudul">
       <ul>
-<?
+<?php
 $query = $this->homepage_model->showArticleJenis(1,$strID);
 foreach ($query as $row) {
         $strID .= " and id<>".$row['id'];
@@ -124,7 +124,7 @@ foreach ($query as $row) {
       </ul>
       <div style="margin-top:5px">
         <b>Tags:</b> 
-<?
+<?php
 $query = $this->homepage_model->showArticleJenisTag(1);
 foreach ($query as $row) {
         $fontsize = rand(1, 5);
@@ -134,15 +134,15 @@ foreach ($query as $row) {
 ?>
       </div>
     </div>
-    <div><img src="<?=$this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+    <div><img src="<?php $this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
   </div>
 
   <!-- FEATURE -->
   <div style="float:left;width:300px;">
-    <div><a href="<?=site_url('feature')?>"><img src="<?=$this->config->item('URL_IMG')?>v9-col-feature.gif" border="0" alt="feature" title="feature" /></a></div>
+    <div><a href="<?php site_url('feature')?>"><img src="<?php $this->config->item('URL_IMG')?>v9-col-feature.gif" border="0" alt="feature" title="feature" /></a></div>
     <div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;" class="ListHomeJudul">
       <ul>
-<?
+<?php
 $query = $this->homepage_model->showArticleJenis(23,$strID);
 foreach ($query as $row) {
         $strID .= " and id<>".$row['id'];
@@ -153,7 +153,7 @@ foreach ($query as $row) {
       </ul>
       <div style="margin-top:5px">
         <b>Tags:</b> 
-<?
+<?php
 $query = $this->homepage_model->showArticleJenisTag(23);
 foreach ($query as $row) {
         $fontsize = rand(1, 5);
@@ -163,19 +163,19 @@ foreach ($query as $row) {
 ?>
       </div>
     </div>
-    <div><img src="<?=$this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+    <div><img src="<?php $this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
   </div>
   <!-- END ROW 2 -->
   <!-- START ROW 3 -->
   <div style="clear:both;padding-top:10px;"></div>
   <div style="float:right;width:610px;">
     <div style="float:left;width:300px;">
-      <div><? echo  $this->banner_model->getBanner(303); ?></div>
-      <div style="margin-top:10px"><? echo  $this->banner_model->getBanner(304); ?></div>
-      <div style="margin-top:10px"><? echo  $this->banner_model->getBanner(305); ?></div>
+      <div><?php echo  $this->banner_model->getBanner(303); ?></div>
+      <div style="margin-top:10px"><?php echo  $this->banner_model->getBanner(304); ?></div>
+      <div style="margin-top:10px"><?php echo  $this->banner_model->getBanner(305); ?></div>
     </div>
     <div style="float:right;width:300px;">
-<?
+<?php
 $query = $this->homepage_model->showArticleJenis('2 or jenis_id=4',$strID,4,'img_list');
 foreach ($query as $row)
 {
@@ -194,7 +194,7 @@ foreach ($query as $row)
     <div style="clear:both"></div>
   </div>
   <div style="float:left;width:300px;">
-<?
+<?php
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and (jenis_id=2 or jenis_id=4) $strID order by tgl_robot desc limit 8";
 $query = $this->homepage_model->showArticleJenis('2 or jenis_id=4',$strID,7);
 foreach ($query as $row)
@@ -216,7 +216,7 @@ foreach ($query as $row)
 <div class="container" style="background:#E9E9E9">
   <div style="float:left;width:610px;margin-right:10px;">
     <div class="JudulKanal">Variety Show</div>
-<?
+<?php
 $query = $this->homepage_model->showArticleJenis(24, $strID, 4, 'img_list');
 foreach ($query as $row) {
     $strID .= " and id<>".$row['id'];
@@ -232,8 +232,8 @@ foreach ($query as $row) {
 ?>
   </div>
   <div style="float:left;width:300px;">
-      <div><? echo  $this->banner_model->getBanner(308); ?></div>
+      <div><?php echo  $this->banner_model->getBanner(308); ?></div>
   </div>
-<?
+<?php
 include (APPPATH."views/inc_footer.php");
 ?>

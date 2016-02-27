@@ -1,4 +1,4 @@
-<?
+<?php
 $dataArticle = $this->article_model->getArticleContent($artikel_id);
 if (count($dataArticle) > 0) {
 	$artikel_id = $dataArticle['id'];
@@ -194,16 +194,16 @@ if ($artikel_jenis_id==9) {
                 <div class="fb-like" data-send="false" data-layout="box_count" data-width="450" data-show-faces="false"></div>
             </div>
             <div style="margin:8px 0 0 15px;float:left;">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?=current_url()?>" data-via="indosiartvtwit" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php current_url()?>" data-via="indosiartvtwit" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
             </div>
             <div style="margin:8px 0 0 15px;float:left;">
-                <div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60" data-href="<?=current_url()?>"></div>
+                <div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60" data-href="<?php current_url()?>"></div>
             </div>
             <div style="clear:both"></div>
         </div>
         <div>
             <script type="text/javascript">var addthis_pub="kewell";</script>
-            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '<?=$HTMLCanonical?>', '<?=$artikel_judul?>')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+            <a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', '<?php $HTMLCanonical?>', '<?php $artikel_judul?>')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
         </div>
         <div style="clear:both"></div>
         <br /><br />
@@ -211,11 +211,11 @@ if ($artikel_jenis_id==9) {
         	<div id="theArtikelComments"></div>
         	<div id="theArtikelCommentForm"></div>
         </div>
-		<script type="text/javascript" src="<?=$this->config->item('URL_JS')?>jquery.form.js"></script>
-		<script type="text/javascript" src="<?=$this->config->item('URL_JS')?>jquery.blockUI.js"></script>
+		<script type="text/javascript" src="<?php $this->config->item('URL_JS')?>jquery.form.js"></script>
+		<script type="text/javascript" src="<?php $this->config->item('URL_JS')?>jquery.blockUI.js"></script>
 		<script language="javascript">		
 		function ShowCommentsList(page) {
-            surl = "/comment/paging/<?=$artikel_id?>/" + page;
+            surl = "/comment/paging/<?php $artikel_id?>/" + page;
             $.ajax({
                 type: "GET",
                 url: surl,
@@ -231,13 +231,13 @@ if ($artikel_jenis_id==9) {
 		}
 		
 		ShowCommentsList(1);
-		//$.post("/comment/formbox/<?=$artikel_id?>",function(data){$("#theArtikelCommentForm").html(data)});
+		//$.post("/comment/formbox/<?php $artikel_id?>",function(data){$("#theArtikelCommentForm").html(data)});
 		</script>
 	</div>
 	<div class="side-container">
-		<div style="margin-bottom:10px"><?=$this->banner_model->getBanner(303)?></div>
-		<div style="margin-bottom:10px"><?=$this->banner_model->getBanner(328)?></div>
-<?
+		<div style="margin-bottom:10px"><?php $this->banner_model->getBanner(303)?></div>
+		<div style="margin-bottom:10px"><?php $this->banner_model->getBanner(328)?></div>
+<?php
 		// --- ARTIKEL LAINNYA ---- //
 		$moreArticle = $this->article_model->showMoreArticle($artikel_jenis_id,$strID);		
 		if (count($moreArticle) > 0) {
@@ -279,7 +279,7 @@ if ($artikel_jenis_id==9) {
 var w=screen.width;
 var h=screen.height;
 var r=document.referrer;
-//document.write('<ifr'+'ame src='+'"/phpx/stats.php?d=<?=$artikel_id?>&amp;w='+w+'&amp;h='+h+'&amp;r='+r+'"'+' marginwidth="0" marginheight="0" width='+'"1"'+' height='+'"1"'+' border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>');
+//document.write('<ifr'+'ame src='+'"/phpx/stats.php?d=<?php $artikel_id?>&amp;w='+w+'&amp;h='+h+'&amp;r='+r+'"'+' marginwidth="0" marginheight="0" width='+'"1"'+' height='+'"1"'+' border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>');
 </script>*/
 
 include (APPPATH."views/inc_footer.php");

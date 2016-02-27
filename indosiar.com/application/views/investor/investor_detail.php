@@ -143,7 +143,7 @@ background-color: #efefef;
 
 </style>
 <div style="float:left;width:200px;margin-right:20px;">
-<?=$menu?>
+<?php $menu?>
 </div>
 <div style="float:right;width:700px;">
 	<div class="RoundedBox5px" style="font:bold 18px Lucida Sans,Lucida Grande,Trebuchet MS;letter-spacing:-1px;color:#fff;background:#CFCFCF;padding:5px 10px;margin-bottom:10px;">Investor Relation</div>
