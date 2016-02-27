@@ -1,4 +1,4 @@
-<?php
+<?php 
 $HTMLPageTitle= "Kontak Respond Online";
 $sitename = "Kontak Respond Online";
 
@@ -58,41 +58,41 @@ function storeCaret(ftext) {
 </script>
   <table width="100%" border=0 cellspacing=0 cellpadding=0 bgcolor=#FFFFFF>
     <tr> 
-      <td width=1 bgcolor="#425163"><img src="<?=$this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
-      <td colspan=3 bgcolor="#FFFFFF"><img src="<?=$this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
-      <td width=1 bgcolor="#425163"><img src="<?=$this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
+      <td width=1 bgcolor="#425163"><img src="<?php $this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
+      <td colspan=3 bgcolor="#FFFFFF"><img src="<?php $this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
+      <td width=1 bgcolor="#425163"><img src="<?php $this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
     </tr>
     <tr> 
-      <td width=1 bgcolor="#425163"><img src="<?=$this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
-      <td width=20 bgcolor="#DEDFE7"><img src="<?=$this->config->item('URL_IMG')?>s.gif" width=1 height=34></td>
-      <td width=728 bgcolor="#DEDFE7"> <img src="<?=$this->config->item('URL_IMG')?>lr.gif" width=90 height=13><br>
-        <a href="<?=$this->config->item('URL_ROOT')?>daua/humas" class=menu>HUMAS</a> | 
-        <a href="<?=$this->config->item('URL_ROOT')?>daua/program" class=menu>PROGRAMME</a> | 
-        <a href="<?=$this->config->item('URL_ROOT')?>daua/news" class=menu>NEWS</a> | 
-        <a href="<?=$this->config->item('URL_ROOT')?>daua/produsi" class=menu>PRODUKSI</a> | 
-        <a href="<?=$this->config->item('URL_ROOT')?>daua/sales" class=menu>SALES</a> | 
-        <a href="<?=$this->config->item('URL_ROOT')?>daua/market" class=menu>MARKETING</a> | 
-        <a href="<?=$this->config->item('URL_ROOT')?>daua/finacc" class=menu>FINANCE</a> | 
-        <a href="<?=$this->config->item('URL_ROOT')?>daua/webadmin" class=menu>WEBADMIN</a> | 
-        <a href="<?=$this->config->item('URL_ROOT')?>daua/engineering" class=menu>ENGINEERING</a> | 
-        <a href="<?=$this->config->item('URL_ROOT')?>daua" class=menu>SEMUA DIVISI</a></td>
+      <td width=1 bgcolor="#425163"><img src="<?php $this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
+      <td width=20 bgcolor="#DEDFE7"><img src="<?php $this->config->item('URL_IMG')?>s.gif" width=1 height=34></td>
+      <td width=728 bgcolor="#DEDFE7"> <img src="<?php $this->config->item('URL_IMG')?>lr.gif" width=90 height=13><br>
+        <a href="<?php $this->config->item('URL_ROOT')?>daua/humas" class=menu>HUMAS</a> | 
+        <a href="<?php $this->config->item('URL_ROOT')?>daua/program" class=menu>PROGRAMME</a> | 
+        <a href="<?php $this->config->item('URL_ROOT')?>daua/news" class=menu>NEWS</a> | 
+        <a href="<?php $this->config->item('URL_ROOT')?>daua/produsi" class=menu>PRODUKSI</a> | 
+        <a href="<?php $this->config->item('URL_ROOT')?>daua/sales" class=menu>SALES</a> | 
+        <a href="<?php $this->config->item('URL_ROOT')?>daua/market" class=menu>MARKETING</a> | 
+        <a href="<?php $this->config->item('URL_ROOT')?>daua/finacc" class=menu>FINANCE</a> | 
+        <a href="<?php $this->config->item('URL_ROOT')?>daua/webadmin" class=menu>WEBADMIN</a> | 
+        <a href="<?php $this->config->item('URL_ROOT')?>daua/engineering" class=menu>ENGINEERING</a> | 
+        <a href="<?php $this->config->item('URL_ROOT')?>daua" class=menu>SEMUA DIVISI</a></td>
       <td width=20 bgcolor="#DEDFE7">&nbsp;</td>
-      <td width=1 bgcolor="425163"><img src="<?=$this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
+      <td width=1 bgcolor="425163"><img src="<?php $this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
     </tr>
   </table>
   <table width="100%" border=0 cellspacing=0 cellpadding=0 bgcolor="#FFFFFF">
     <tr> 
-      <td width=1 bgcolor="#425163"><img src="<?=$this->config->item('URL_IMG')?>s.gif" width="1" height="1"></td>
-      <td width=20 bgcolor="#8C9AA5"><img src="<?=$this->config->item('URL_IMG')?>s.gif" width="1" height="22"></td>
+      <td width=1 bgcolor="#425163"><img src="<?php $this->config->item('URL_IMG')?>s.gif" width="1" height="1"></td>
+      <td width=20 bgcolor="#8C9AA5"><img src="<?php $this->config->item('URL_IMG')?>s.gif" width="1" height="22"></td>
       <td bgcolor="#8C9AA5"><b><font color="#FFFFFF">KONTAK KAMI</font></b></td>
-      <td bgcolor="#8C9AA5" align="right"><img src="<?=$this->config->item('URL_IMG')?>kx.gif" width=117 height=26 border=0 alt="kirimkan komentar Anda di sini!"></td>
+      <td bgcolor="#8C9AA5" align="right"><img src="<?php $this->config->item('URL_IMG')?>kx.gif" width=117 height=26 border=0 alt="kirimkan komentar Anda di sini!"></td>
       <td width=20 bgcolor="#8C9AA5">&nbsp;</td>
-      <td width=1 bgcolor=425163><img src="<?=$this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
+      <td width=1 bgcolor=425163><img src="<?php $this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
     </tr>
   </table>
   <table width="100%" border=0 cellspacing=0 cellpadding=0 bgcolor=#FFFFFF>
     <tr> 
-      <td width=1 bgcolor="#425163"><img src="<?=$this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
+      <td width=1 bgcolor="#425163"><img src="<?php $this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
       <td width=20>&nbsp;</td>
       <td width=728 align="center">
 <br>
@@ -263,8 +263,8 @@ function storeCaret(ftext) {
               <p><b>Indosiar memang untuk Anda !</b></p>
             </form>
           </div>
-															<script type="text/javascript" src="<?=$this->config->item('URL_JS')?>jquery.form.js"></script>
-															<script type="text/javascript" src="<?=$this->config->item('URL_JS')?>jquery.blockUI.js"></script>
+															<script type="text/javascript" src="<?php $this->config->item('URL_JS')?>jquery.form.js"></script>
+															<script type="text/javascript" src="<?php $this->config->item('URL_JS')?>jquery.blockUI.js"></script>
 															<script language="javascript">
 															$().ajaxStop($.unblockUI); 
 															
@@ -300,9 +300,9 @@ function storeCaret(ftext) {
         <br>
       </td>
       <td width=20>&nbsp;</td>
-      <td width=1 bgcolor="#425163"><img src="<?=$this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
+      <td width=1 bgcolor="#425163"><img src="<?php $this->config->item('URL_IMG')?>s.gif" width=1 height=1></td>
     </tr>
   </table>
-<?
+<?php 
 include (APPPATH."views/inc_footer.php");
 ?>

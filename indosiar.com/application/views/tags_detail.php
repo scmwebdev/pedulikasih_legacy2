@@ -1,4 +1,4 @@
-<?
+<?php 
 $sql = "select tags from ivmweb2009_artikel_tags where tags_url='$tags_url' limit 1";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {

@@ -1,4 +1,4 @@
-<?php
+<?php 
 $judul = ucwords(str_replace("-"," ",$this->uri->segment(4)));
 
 $sitename = "Liga Primer Indonesia";
@@ -12,7 +12,7 @@ include (APPPATH."views/lpi_top.php");
 	<style>
 	.video-listbox {width:120px;height:160px;float:left;margin:4px;padding:3px;border:1px solid #666;font-size:10px;text-align:center;}
 	</style>
-	<div class="JudulArtikel">Video <?=$judul?></div>
+	<div class="JudulArtikel">Video <?php $judul?></div>
 	<p>&nbsp;</p>
 	<div style="text-align:center"><div name="mediaspace" id="mediaspace">View Video</div></div>
 	<script type="text/javascript" src="http://player.longtailvideo.com/swfobject.js"></script>
@@ -24,14 +24,14 @@ include (APPPATH."views/lpi_top.php");
 		//so.addVariable("channel", "7124");
 		so.addVariable("plugins", "ltas");
 		so.addVariable("ltas.cc", "npxbtmlswnzpxts");
-		so.addVariable("file","http://www.youtube.com/watch%3Fv%3D<?=$this->uri->segment(3)?>");
-		so.addVariable("image","http://img.youtube.com/vi/<?=$this->uri->segment(3)?>/0.jpg");
+		so.addVariable("file","http://www.youtube.com/watch%3Fv%3D<?php $this->uri->segment(3)?>");
+		so.addVariable("image","http://img.youtube.com/vi/<?php $this->uri->segment(3)?>/0.jpg");
 		so.addVariable("skin","http://content.longtailvideo.com/skins/glow/glow.zip");
 		so.write("mediaspace");
 	</script>
 	<p>&nbsp;</p>
 	<p>Video Lainnya:</p>
-<?
+<?php 
 $url = 'http://gdata.youtube.com/feeds/api/videos?vq=%22liga+primer+indonesia%22&racy=exclude&orderby=relevance&start-index=1&max-results=10';
 $data = grab_url($url);
 

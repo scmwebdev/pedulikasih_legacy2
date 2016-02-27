@@ -1,4 +1,4 @@
-<?
+<?php
 $jenis_url = $this->uri->segment(1);
 
 $sql = "select id,jenis from worldcup2010_artikel_jenis where jenis_url='$jenis_url'";

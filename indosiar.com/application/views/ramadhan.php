@@ -1,4 +1,4 @@
-<?
+<?php 
 $artikel_jenis_judul = "Ramadhan";
 $HTMLMetaDescription = "Ramadhan";
 $HTMLMetaKeywords = "Ramadhan";

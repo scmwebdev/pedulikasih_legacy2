@@ -10,11 +10,11 @@ include (APPPATH."views/lpi_top.php");
 
 	<div class="JudulArtikel">Jadwal Pertandingan Liga Primer Indonesia</div>
 	<p>&nbsp;</p>
-<?
+<?php
 include (ROOTBASEPATH."inc/score_lpi.php");
 ?>
   <p>&nbsp;</p>
-<?
+<?php
 include (APPPATH."views/lpi_bottom.php");
 include (APPPATH."views/inc_footer.php");
 ?>

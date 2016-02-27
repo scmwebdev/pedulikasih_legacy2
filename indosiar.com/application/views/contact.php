@@ -1,4 +1,4 @@
-<?
+<?php
 $HTMLPageTitle = "Kontak Indosiar";
 $HTMLMetaDescription = "Contact Us";
 $HTMLMetaKeywords = "Contact Us";

@@ -1,4 +1,4 @@
-<?
+<?php 
 if (!isset($HTMLMetaDescription)) {
 	$HTMLMetaDescription="";
 }
@@ -9,10 +9,10 @@ if (!isset($HTMLMetaKeywords)) {
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title><?=$HTMLPageTitle?></title>
-<meta name="description" content="<?=htmlspecialchars($HTMLMetaDescription)?>" />
-<meta name="keywords" content="<?=$HTMLMetaKeywords?>" />
-<?
+<title><?php $HTMLPageTitle?></title>
+<meta name="description" content="<?php htmlspecialchars($HTMLMetaDescription)?>" />
+<meta name="keywords" content="<?php $HTMLMetaKeywords?>" />
+<?php 
 include(ROOTBASEPATH."inc/metatag.php");
 ?>
 <meta name="robots" content="all" />
@@ -189,8 +189,8 @@ html>body #headerbanner {margin-top:0px;top:0}
 }
 html>body #footerbanner { margin-bottom: 0px; bottom: 0 }
 </style>
-<script type="text/javascript" language="javascript" src="<?=URL_JS?>jquery.js"></script>
-<script type="text/javascript" src="<?=URL_JS?>jquery.corner.js"></script>
+<script type="text/javascript" language="javascript" src="<?php URL_JS?>jquery.js"></script>
+<script type="text/javascript" src="<?php URL_JS?>jquery.corner.js"></script>
 <link rel="stylesheet" href="http://www.indosiar.com/css/ajax-poller.css" type="text/css">
 <script type="text/javascript" src="http://www.indosiar.com/js/ajax.js"></script>
 <script type="text/javascript" src="http://www.indosiar.com/js/ajax-poller.js"></script>
@@ -219,21 +219,21 @@ $(function(){
 <div style="height:50px">&nbsp;</div>
 <div class="header">
 	<div style="float:left;width:600px;margin-top:5px;margin-left:10px;">
-		<a href="<?=site_url()?>">HOME</a> | <a href="<?=site_url('contact')?>">CONTACT US</a> | <a href="<?=site_url('berita')?>">BERITA</a> | <a href="<?=site_url('info-untuk-anda')?>">INFO UNTUK ANDA</a> | <a href="<?=site_url('rss')?>"><img src="/img/rss.gif" heigh="10" border="0"></a>
+		<a href="<?php site_url()?>">HOME</a> | <a href="<?php site_url('contact')?>">CONTACT US</a> | <a href="<?php site_url('berita')?>">BERITA</a> | <a href="<?php site_url('info-untuk-anda')?>">INFO UNTUK ANDA</a> | <a href="<?php site_url('rss')?>"><img src="/img/rss.gif" heigh="10" border="0"></a>
 	</div>
 	<div style="float:right;width:300px;margin-top:5px;">
-	  <form action="<?=site_url('search')?>" method="post" name="search_form" id="search_form" onsubmit="if(document.search_form.qword.value=='Search'){alert('No Keyword');document.search_form.qword.focus();return false;}" >
+	  <form action="<?php site_url('search')?>" method="post" name="search_form" id="search_form" onsubmit="if(document.search_form.qword.value=='Search'){alert('No Keyword');document.search_form.qword.focus();return false;}" >
 	    <input type="hidden" name="doSearch" value="true"/>
 	    <input type="image" name="bt_ok" id="bt_ok" src="/img/search_button.gif" />
 	    <input name="qword" id="keyword" type="text" value="Search" onfocus="if(this.value=='Search') this.value='';" onblur="if(this.value=='') this.value='Search';" size="25" maxlength="255" />
 	  </form>
 	</div>
 	<div style="clear:both">
-		<div style="float:left;width:150px;"><a href="<?=site_url()?>"><img src="/img/v9-logo.gif" alt="indosiar dot com" border="0" /></a></div>
+		<div style="float:left;width:150px;"><a href="<?php site_url()?>"><img src="/img/v9-logo.gif" alt="indosiar dot com" border="0" /></a></div>
 		<div style="float:right;width:750px;margin:20px 10px 0 0;text-align:right;"><script src="http://adlink.indosiar.com/inc.php?idc=322" type="text/javascript"></script></div>
 	</div>
 </div>
 <div class="header-menu" style="background:#EFEFEF">
-	<a href="<?=site_url('fokus')?>">FOKUS</a> | <a href="<?=site_url('patroli')?>">PATROLI</a> | <a href="<?=site_url('ragam')?>">RAGAM</a> | <a href="<?=site_url('gossip')?>">GOSSIP</a> | <a href="<?=site_url('sinopsis')?>">SINOPSIS</a> | <a href="<?=site_url('talk-show')?>">TALK SHOW</a> | <a href="<?=site_url('kolom')?>">KOLOM</a> | <span class="header-menu-other"><a href="http://www.indosiar.com/daua">RESPOND ONLINE</a> | <a href="http://www.indosiar.com/peduli-kasih/">PEDULI KASIH</a> | <a href="http://ww1.indosiar.com/v4/kitapeduli/">KITA PEDULI</a> | <a href="http://ww1.indosiar.com/investor/">INVESTOR RELATION</a></span>
+	<a href="<?php site_url('fokus')?>">FOKUS</a> | <a href="<?php site_url('patroli')?>">PATROLI</a> | <a href="<?php site_url('ragam')?>">RAGAM</a> | <a href="<?php site_url('gossip')?>">GOSSIP</a> | <a href="<?php site_url('sinopsis')?>">SINOPSIS</a> | <a href="<?php site_url('talk-show')?>">TALK SHOW</a> | <a href="<?php site_url('kolom')?>">KOLOM</a> | <span class="header-menu-other"><a href="http://www.indosiar.com/daua">RESPOND ONLINE</a> | <a href="http://www.indosiar.com/peduli-kasih/">PEDULI KASIH</a> | <a href="http://ww1.indosiar.com/v4/kitapeduli/">KITA PEDULI</a> | <a href="http://ww1.indosiar.com/investor/">INVESTOR RELATION</a></span>
 </div>
 <div class="container">

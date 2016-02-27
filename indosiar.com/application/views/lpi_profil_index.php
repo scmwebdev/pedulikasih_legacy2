@@ -41,7 +41,7 @@ include (APPPATH."views/lpi_top.php");
 	  </tr>
 	</table>
 
-<?
+<?php
 include (APPPATH."views/lpi_bottom.php");
 include (APPPATH."views/inc_footer.php");
 ?>

@@ -16,10 +16,10 @@ include (APPPATH."views/inc_header.php");
 include (APPPATH."views/lpi_top.php");
 ?>
 
-	<div class="JudulArtikel">Profil Tim <?=$tim_nama?></div>
+	<div class="JudulArtikel">Profil Tim <?php $tim_nama?></div>
 	<p>&nbsp;</p>
 	
-<?
+<?php
 echo file_get_contents(APPPATH."views/lpi/".$tim_file);
 
 include (APPPATH."views/lpi_bottom.php");

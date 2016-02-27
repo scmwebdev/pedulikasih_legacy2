@@ -1,11 +1,11 @@
-<?
+<?php 
 include (APPPATH."views/dropbox_header.php");
 ?>
 	<div class="RoundedBox5px" style="margin-bottom:10px;padding:20px;background:#DFDBCB;">
 		<div class="RoundedBox5px" style="float:left;width:680px;">
 			<div style="margin-bottom:5px;padding:5px;background:#F7EFDF;" class="RoundedBox5px JudulKanal">Resensi Buku</div>
 			
-<?	
+<?php 	
 $sql = "SELECT ringkasan,jenis,tanggal,id,subjudul,judul,judul_url,jenis_judul,jenis_url,img_menu,folder,img_artikel FROM ivmweb_artikel_main WHERE UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and img_menu<>'' and kategori=1 and jenis=54 order by tgl_robot desc limit 2";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -32,7 +32,7 @@ $query->free_result();
 	
 	<div style="float:left;width:310px;margin-right:10px;">
 		<div style="margin-bottom:5px;padding:5px;background:#DFDBCB;" class="RoundedBox5px JudulKanal">Miracle Management</div>
-<?
+<?php 
 	$koneksidb = mysql_connect ("localhost", "myidc", "ivmindocemen2008");
 	if (!$koneksidb) die('Could not connect: ' . mysql_error());
 	mysql_select_db("gunadigetol_com") or die ('Can not use gunadigetol_com : ' . mysql_error());
@@ -54,12 +54,12 @@ $query->free_result();
 	
 	<div style="float:left;width:310px;margin-right:10px;">
 		<div style="margin-bottom:5px;padding:5px;background:#DFDBCB;" class="RoundedBox5px JudulKanal">Forum Lautan Penulis</div>
-		<?=grab_url("http://www.lautanindonesia.com/phpx/ajax_forum_lautan_penulis.php")?>
+		<?php grab_url("http://www.lautanindonesia.com/phpx/ajax_forum_lautan_penulis.php")?>
 	</div>
 	
 	<div style="float:left;width:330px">
 		<div style="margin-bottom:5px;padding:5px;background:#DFDBCB;" class="RoundedBox5px JudulKanal">Gallery Photo</div>
-<?
+<?php 
 $sql = "SELECT a.jenis_url,a.judul,a.judul_url,a.id,p.namafile FROM dropbox_artikel a INNER JOIN dropbox_artikel_photo p ON a.id=p.id_artikel WHERE UNIX_TIMESTAMP(a.tanggal_robot)<=UNIX_TIMESTAMP() and a.jenis_id=2 order by p.id desc limit 8";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -75,6 +75,6 @@ $query->free_result();
 ?>
 		<div style="clear:both"></div>
 	</div>
-<?
+<?php 
 include (APPPATH."views/dropbox_footer.php");
 ?>

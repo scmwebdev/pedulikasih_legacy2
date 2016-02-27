@@ -1,4 +1,4 @@
-<?
+<?php
 /*$artikel_id 				= $this->uri->segment(2);
 $artikel_url 				= $this->uri->segment(3);
 

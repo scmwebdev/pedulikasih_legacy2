@@ -1,4 +1,4 @@
-<?
+<?php 
 include (APPPATH."views/dropbox_header.php");
 ?>
 <script type="text/javascript">
@@ -46,7 +46,7 @@ function validate_form ( )
 //-->
 </script>
 
-<?
+<?php 
 include (APPPATH."views/jseditor.php");
 ShowTinyMCE("naskah");
 ?>
@@ -102,15 +102,15 @@ ShowTinyMCE("naskah");
           <td>
 		  <select name="tema">
             <option value="">Tema Lainnya</option>				  
-<?
+<?php 
 $sql = "select * from blog_gaul_tema_drop_box where status=0";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
 		foreach ($query->result() as $row)
 		{
 ?>		
-            <option value="<?=$row->id?>"><?=$row->tema?></option>
-<?
+            <option value="<?php $row->id?>"><?php $row->tema?></option>
+<?php 
 		}
 }
 $query->free_result();
@@ -153,10 +153,10 @@ $query->free_result();
 	  </form>
 	</div>
 	<div style="float:right; width:270px;">
-<?
+<?php 
 include (APPPATH."views/dropbox_inc_samping.php");
 ?>
 	</div>
-<?
+<?php 
 include (APPPATH."views/dropbox_footer.php");
 ?>

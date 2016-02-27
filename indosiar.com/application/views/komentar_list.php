@@ -1,4 +1,4 @@
-<?
+<?php 
 header("Cache-Control: no-store, no-cache, must-revalidate"); 
 header("Cache-Control: post-check=0, pre-check=0", false); 
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
@@ -53,4 +53,4 @@ if (is_numeric($artikel_id)) {
 		// --- END LIST KOMENTAR ---- //
 }
 ?>
-<!--<p align="center">Page rendered in <?=$this->benchmark->elapsed_time();?> seconds - <?=$this->benchmark->memory_usage();?></p>-->
+<!--<p align="center">Page rendered in <?php $this->benchmark->elapsed_time();?> seconds - <?php $this->benchmark->memory_usage();?></p>-->

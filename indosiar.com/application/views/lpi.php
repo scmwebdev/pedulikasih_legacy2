@@ -1,4 +1,4 @@
-<?
+<?php
 if ($this->uri->segment(2) == "profil") {
 	if ($this->uri->segment(3) == "")
 		include (APPPATH."views/lpi_profil_index.php");

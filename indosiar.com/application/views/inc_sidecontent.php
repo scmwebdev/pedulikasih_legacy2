@@ -1,4 +1,4 @@
-<?
+<?php 
 echo '
 				<div style="margin-bottom:10px">'.$this->banner_model->getBanner(303).'</div>
 				<h3>Berita HOT:</h3>

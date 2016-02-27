@@ -1,4 +1,4 @@
-<?
+<?php 
 $HTMLPageTitle = "Informasi Terbaru Indonesia";
 $HTMLMetaDescription = "Informasi Terbaru Indonesia";
 $HTMLMetaKeywords = "Lautan Indonesia - Indonesian Portal Community";
@@ -10,7 +10,7 @@ include (APPPATH."views/inc_header.php");
 			<div class="RoundedBox5px" style="float:left;width:260px;height:300px;padding:10px;background:#fff;"><div id="hlBOX"></div></div>
 			<div style="float:left; width:310px;">
 				<div style="padding:0 0 5px 10px;" class="JudulKanal">What's On The Week</div>
-<?
+<?php 
 $strID = "";
 $sql = "select id,subjudul,judul,judul_url,ringkasan,jenis_judul,jenis_url,tanggal,img_index,folder,tags,tgl_tayang from ivmweb2009_artikel_data where tgl_tayang<>'0000-00-00 00:00:00' and  UNIX_TIMESTAMP(tgl_robot)>=UNIX_TIMESTAMP() and img_index<>'' and kategori_id=2 order by tgl_robot limit 4";
 $query = $this->db->query($sql);
@@ -42,7 +42,7 @@ if ($query->num_rows() > 0) {
 }
 $query->free_result();
 ?>
-				<div style="margin:10px 0 0 10px"><a href="<?=site_url('jadwal-acara')?>"><img src="<?=URL_IMG?>v9-jadwal.gif" border="0" alt="jadwal acara" title="jadwal acara" /></a></div>
+				<div style="margin:10px 0 0 10px"><a href="<?php site_url('jadwal-acara')?>"><img src="<?php URL_IMG?>v9-jadwal.gif" border="0" alt="jadwal acara" title="jadwal acara" /></a></div>
 			</div>
 			<div style="clear:both"></div>
 			<script type="text/javascript">
@@ -65,7 +65,7 @@ $query->free_result();
 	</div>
 	<div style="float:left;width:300px;">
 		<div class="RoundedBox5px" style="background:#B6B6B6;padding:10px;height:320px;">
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,img_list,folder,tags,tgl_tayang from ivmweb2009_artikel_data where tgl_tayang<>'0000-00-00 00:00:00' and UNIX_TIMESTAMP(tgl_robot)>=UNIX_TIMESTAMP() and img_list<>'' and jenis_id=1 $strID order by tgl_robot limit 3";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -91,11 +91,11 @@ $query->free_result();
 	<!-- START ROW 2 -->
 	<div style="clear:both;padding-top:10px;"></div>
 	<div style="float:left;width:300px;margin-right:10px;">
-		<div><a href="<?=site_url('gossip')?>"><img src="<?=URL_IMG?>v9-col-gossip.gif" border="0" alt="gossip" title="gossip" /></a></div>
+		<div><a href="<?php site_url('gossip')?>"><img src="<?php URL_IMG?>v9-col-gossip.gif" border="0" alt="gossip" title="gossip" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=2 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -109,7 +109,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=2 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -126,14 +126,14 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<div style="float:left;width:300px;margin-right:10px;">
-		<div><a href="<?=site_url('sinopsis')?>"><img src="<?=URL_IMG?>v9-col-sinopsis.gif" border="0" alt="sinopsis" title="sinopsis" /></a></div>
+		<div><a href="<?php site_url('sinopsis')?>"><img src="<?php URL_IMG?>v9-col-sinopsis.gif" border="0" alt="sinopsis" title="sinopsis" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=1 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -147,7 +147,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)>=UNIX_TIMESTAMP() and jenis_id=1 $strID order by tgl_robot limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -164,14 +164,14 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<div style="float:left;width:300px;">
-		<div><a href="<?=site_url('talk-show')?>"><img src="<?=URL_IMG?>v9-col-talkshow.gif" border="0" alt="talkshow" title="talkshow" /></a></div>
+		<div><a href="<?php site_url('talk-show')?>"><img src="<?php URL_IMG?>v9-col-talkshow.gif" border="0" alt="talkshow" title="talkshow" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=4 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -185,7 +185,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=4 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -202,7 +202,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<!-- END ROW 2 -->
 	<!-- START ROW 3 -->
@@ -214,7 +214,7 @@ $query->free_result();
 			<div style="margin-top:10px"><script src="http://adlink.indosiar.com/inc.php?idc=305" type="text/javascript"></script></div>
 		</div>
 		<div style="float:right;width:300px;">
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,img_list,folder,tags,tgl_tayang from ivmweb2009_artikel_data where img_list<>'' and UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and (jenis_id=2 or jenis_id=4) $strID order by tgl_robot desc limit 4";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -237,7 +237,7 @@ $query->free_result();
 		<div style="clear:both"></div>
 	</div>
 	<div style="float:left;width:300px;">
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and (jenis_id=2 or jenis_id=4) $strID order by tgl_robot desc limit 8";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -262,7 +262,7 @@ $query->free_result();
 <div class="container" style="background:#E9E9E9">
 	<div style="float:left;width:300px;margin-right:10px;">
 		<div class="JudulKanal">Blog</div>
-<?=grab_url("http://ww1.indosiar.com/ajax/ajax_bloggaul.htm")?>
+<?php grab_url("http://ww1.indosiar.com/ajax/ajax_bloggaul.htm")?>
 		<div class="JudulKanal">Quick Links</div>
 		<div style="float:left;width:48%;">
 			<div class="QuickLinkList"><a href="http://www.bloggaul.com">Blog Gaul</a></div>
@@ -272,7 +272,7 @@ $query->free_result();
 	</div>
 	<div style="float:left;width:300px;margin-right:10px;">
 		<div class="JudulKanal">Video</div>
-<?
+<?php 
 $sql="select tblv.*,tblk.kategori from tbl_video as tblv inner join tbl_video_kategori as tblk on tblv.id_kategori=tblk.id and tblk.kategori_url='kiss' order by tblv.id desc limit 4";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -292,7 +292,7 @@ $query->free_result();
 		  <div><script src="http://adlink.indosiar.com/inc.php?idc=308" type="text/javascript"></script></div>
 		  <div style="margin-top:10px"><script src="http://adlink.indosiar.com/inc.php?idc=305" type="text/javascript"></script></div>
 	</div>
-<?
+<?php 
 include (APPPATH."views/inc_footer.php");
 ?>
 <script language="JavaScript" src="http://www.ltassrv.com/serve/api5.4.asp?d=281&s=318&c=1295&v=1"></script>

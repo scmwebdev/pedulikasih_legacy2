@@ -12,7 +12,7 @@ include (APPPATH."views/pk_top.php");
 	<div class="JudulArtikel">Transfer BCA Perorangan Peduli Kasih</div>
 	<p>&nbsp;</p>
 
-<?
+<?php
 dbconnectpk();
 $sql = "select * from jos_content where id=45";
 $result = mysql_query($sql);

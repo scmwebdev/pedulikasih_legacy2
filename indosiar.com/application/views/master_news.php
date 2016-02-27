@@ -1,4 +1,4 @@
-<?
+<?php 
 $HTMLPageTitle = "Berita Terbaru, Tentang Indonesia, Berita Indonesia";
 $HTMLMetaDescription = "Berita Terbaru, Tentang Indonesia, Berita Indonesia";
 $HTMLMetaKeywords = "Lautan Indonesia - Indonesian Portal Community";
@@ -10,7 +10,7 @@ include (APPPATH."views/inc_header.php");
 			<div class="RoundedBox5px" style="float:left;width:260px;height:300px;padding:10px;background:#fff;"><div id="hlBOX"></div></div>
 			<div style="float:left; width:310px;">
 				<div style="padding:0 0 5px 10px;" class="JudulKanal">News On The Week</div>
-<?
+<?php 
 $strID = "";
 $sql = "select id,subjudul,judul,judul_url,ringkasan,jenis_judul,jenis_url,tanggal,img_index,folder,tags,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and img_index<>'' and kategori_id=1 order by tgl_robot desc limit 4";
 $query = $this->db->query($sql);
@@ -40,7 +40,7 @@ if ($query->num_rows() > 0) {
 }
 $query->free_result();
 ?>
-				<!--<div style="margin:10px 0 0 10px"><a href="<?=site_url('jadwal-acara')?>"><img src="<?=URL_IMG?>v9-jadwal.gif" border="0" alt="jadwal acara" title="jadwal acara" /></a></div>-->
+				<!--<div style="margin:10px 0 0 10px"><a href="<?php site_url('jadwal-acara')?>"><img src="<?php URL_IMG?>v9-jadwal.gif" border="0" alt="jadwal acara" title="jadwal acara" /></a></div>-->
 				<div style="text-align:center;margin-top:10px;"><a href="/jadwal-acara/"><img src="/img/v9-jadwal-cut.gif" border="0" alt="jadwal acara" title="jadwal acara" /></a><a href="/program-change/"><img src="/img/v9-jadwal-change.gif" border="0" alt="program change" title="program change" /></a></div>
 			</div>
 			<div style="clear:both"></div>
@@ -64,7 +64,7 @@ $query->free_result();
 	</div>
 	<div style="float:left;width:300px;">
 		<div class="RoundedBox5px" style="background:#B6B6B6;padding:10px;height:320px;">
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,img_list,folder,tags,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and img_list<>'' and kategori_id=1 $strID order by tgl_robot desc limit 3";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -90,7 +90,7 @@ $query->free_result();
 	<div style="clear:both;padding-top:10px;"></div>
 	<div style="float:right;width:610px;">
 		<div style="float:left;width:300px;">
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,img_list,folder,tags,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=12 $strID order by tgl_robot desc limit 3";
 //$sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,img_list,folder,tags,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and img_list<>'' and jenis_id=12 $strID order by tgl_robot desc limit 3";
 //$sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,img_list,folder,tags,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and img_list<>'' and jenis_id=12 $strID order by id desc limit 3";
@@ -114,7 +114,7 @@ $query->free_result();
 			<div style="margin-top:10px"><script src="http://adlink.indosiar.com/inc.php?idc=304" type="text/javascript"></script></div>
 		</div>
 		<div style="float:right;width:300px;">
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,img_list,folder,tags,tgl_tayang from ivmweb2009_artikel_data where img_list<>'' and UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and kategori_id=1 $strID order by tgl_robot desc limit 2";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -138,7 +138,7 @@ $query->free_result();
 		<div style="clear:both"></div>
 	</div>
 	<div style="float:left;width:300px;">
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and kategori_id=1 $strID order by tgl_robot desc limit 9";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -162,11 +162,11 @@ $query->free_result();
 	<!-- START ROW 3 -->
 	<div style="clear:both;padding-top:10px;"></div>
 	<div style="float:left;width:300px;margin-right:10px;">
-		<div><a href="<?=site_url('fokus')?>"><img src="<?=URL_IMG?>v9-col-fokus.gif" border="0" alt="fokus" title="fokus" /></a></div>
+		<div><a href="<?php site_url('fokus')?>"><img src="<?php URL_IMG?>v9-col-fokus.gif" border="0" alt="fokus" title="fokus" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=5 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -180,7 +180,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=5 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -197,14 +197,14 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<div style="float:left;width:300px;margin-right:10px;">
-		<div><a href="<?=site_url('patroli')?>"><img src="<?=URL_IMG?>v9-col-patroli.gif" border="0" alt="patroli" title="patroli" /></a></div>
+		<div><a href="<?php site_url('patroli')?>"><img src="<?php URL_IMG?>v9-col-patroli.gif" border="0" alt="patroli" title="patroli" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=6 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -218,7 +218,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=6 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -235,14 +235,14 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<div style="float:left;width:300px;">
-		<div><a href="<?=site_url('ragam')?>"><img src="<?=URL_IMG?>v9-col-ragam.gif" border="0" alt="ragam" title="ragam" /></a></div>
+		<div><a href="<?php site_url('ragam')?>"><img src="<?php URL_IMG?>v9-col-ragam.gif" border="0" alt="ragam" title="ragam" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=3 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -256,7 +256,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=3 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -273,7 +273,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php URL_IMG?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<div style="clear:both"></div>
 	<!-- END ROW 3 -->	
@@ -281,7 +281,7 @@ $query->free_result();
 <div class="container" style="background:#E9E9E9">
 	<div style="float:left;width:300px;margin-right:10px;">
 		<div class="JudulKanal">Kolom</div>
-	<?
+	<?php 
 	$sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=7 $strID order by tgl_robot desc limit 3";
 	$query = $this->db->query($sql);
 	if ($query->num_rows() > 0) {
@@ -308,12 +308,12 @@ $query->free_result();
 					<div class="RoundedBoxBottom5px" style="background:#fff;padding:5px;">
 						
 
-				<form action="<? echo $_SERVER['PHP_SELF']; ?>" onsubmit="return false" method="post" name="frmPoll">
+				<form action="<?php  echo $_SERVER['PHP_SELF']; ?>" onsubmit="return false" method="post" name="frmPoll">
 						<!-- START OF POLLER -->
 						<div class="pollerx">
 						
-							<div class="poller_question" id="poller_question<? echo $pollerId; ?>">
-							<?			
+							<div class="poller_question" id="poller_question<?php  echo $pollerId; ?>">
+							<?php 			
 				
 							// Retreving poll from database
 							echo "<p class=\"pollerTitle\">".$inf["pollerTitle"]."</p>";	// Output poller title
@@ -326,19 +326,19 @@ $query->free_result();
 								}
 								mysql_free_result($resOptions);
 							?><br />			
-							<div align="center"><a href="javascript:;" onmousedown="castMyVote(<? echo $pollerId; ?>,document.frmPoll)"><img src="http://www.indosiar.com/images/vote_button.gif" border=0></a></div>
+							<div align="center"><a href="javascript:;" onmousedown="castMyVote(<?php  echo $pollerId; ?>,document.frmPoll)"><img src="http://www.indosiar.com/images/vote_button.gif" border=0></a></div>
 							</div>
-							<div class="poller_waitMessage" id="poller_waitMessage<? echo $pollerId; ?>">
+							<div class="poller_waitMessage" id="poller_waitMessage<?php  echo $pollerId; ?>">
 								Getting poll results. Please wait...
 							</div>
-							<div class="poller_results" id="poller_results<? echo $pollerId; ?>">
+							<div class="poller_results" id="poller_results<?php  echo $pollerId; ?>">
 							<!-- This div will be filled from Ajax, so leave it empty --></div>
 						</div>
 						<!-- END OF POLLER -->
 						<script type="text/javascript">
 						if(useCookiesToRememberCastedVotes){
-							var cookieValue = Poller_Get_Cookie('dhtmlgoodies_poller_<? echo $pollerId; ?>');
-							if(cookieValue && cookieValue.length>0)displayResultsWithoutVoting(<? echo $pollerId; ?>); // This is the code you can use to prevent someone from casting a vote. You should check on cookie or ip address
+							var cookieValue = Poller_Get_Cookie('dhtmlgoodies_poller_<?php  echo $pollerId; ?>');
+							if(cookieValue && cookieValue.length>0)displayResultsWithoutVoting(<?php  echo $pollerId; ?>); // This is the code you can use to prevent someone from casting a vote. You should check on cookie or ip address
 						
 						}
 						</script>
@@ -350,7 +350,7 @@ $query->free_result();
 					</div>
 				</div>
 				
-				<?
+				<?php 
 				}
 				mysql_free_result($res);
 				?>
@@ -358,7 +358,7 @@ $query->free_result();
 	</div>
 	<div style="float:left;width:300px;margin-right:10px;">
 		<div class="JudulKanal">Video</div>
-<?
+<?php 
 $sql="select tblv.*,tblk.kategori from tbl_video as tblv inner join tbl_video_kategori as tblk on tblv.id_kategori=tblk.id order by tblv.id desc limit 6";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -394,7 +394,7 @@ $query->free_result();
 		  <div style="margin-top:10px"><script src="http://adlink.indosiar.com/inc.php?idc=305" type="text/javascript"></script></div>
 		</div>
 	</div>
-<?
+<?php 
 include (APPPATH."views/inc_footer.php");
 ?>
 <script language="JavaScript" src="http://www.ltassrv.com/serve/api5.4.asp?d=281&s=318&c=1295&v=1"></script>

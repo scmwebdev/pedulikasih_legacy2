@@ -1,4 +1,4 @@
-<?
+<?php 
 if ($this->uri->segment(2) == "berita") {
 		include (APPPATH."views/pk_berita.php");
 } elseif ($this->uri->segment(2) == "penerimabantuan") {

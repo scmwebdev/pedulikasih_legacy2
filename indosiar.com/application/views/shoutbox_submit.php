@@ -1,4 +1,4 @@
-<?
+<?php 
 if (!isset($_REQUEST['SBKomentar']) || empty($_REQUEST['SBKomentar'])) {
 	echo "Error!";
 } else {

@@ -160,7 +160,7 @@ div.RoundedBoxOuter {background:#97A5B0}
         
 	});
 </script>
-<?
+<?php
 if (isset($JSHeader)) echo $JSHeader;
 $ActiveRootPage = ($this->uri->segment(2) == "") ? 'home' : $this->uri->segment(2);
 ?>
@@ -170,10 +170,10 @@ $ActiveRootPage = ($this->uri->segment(2) == "") ? 'home' : $this->uri->segment(
 <div class="BodyBox">
 	<div class="HeaderMenu">
 		<ul>
-			<li<?=($ActiveRootPage == "home") ? ' class="selected"' : ''?>><a href="/dropbox">H O M E</a></li>
-			<li<?=($ActiveRootPage == "toa") ? ' class="selected"' : ''?>><a href="/dropbox/toa">FORMULIR DROPBOX</a></li>
-			<li<?=($ActiveRootPage == "pengumuman") ? ' class="selected"' : ''?>><a href="/dropbox/pengumuman">PENGUMUMAN</a></li>
-			<li<?=($ActiveRootPage == "photo") ? ' class="selected"' : ''?>><a href="/dropbox/photo">PHOTO</a></li>
+			<li<?php ($ActiveRootPage == "home") ? ' class="selected"' : ''?>><a href="/dropbox">H O M E</a></li>
+			<li<?php ($ActiveRootPage == "toa") ? ' class="selected"' : ''?>><a href="/dropbox/toa">FORMULIR DROPBOX</a></li>
+			<li<?php ($ActiveRootPage == "pengumuman") ? ' class="selected"' : ''?>><a href="/dropbox/pengumuman">PENGUMUMAN</a></li>
+			<li<?php ($ActiveRootPage == "photo") ? ' class="selected"' : ''?>><a href="/dropbox/photo">PHOTO</a></li>
 		</ul>
 		<br clear="left" />
 	</div>

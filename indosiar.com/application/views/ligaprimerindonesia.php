@@ -1,4 +1,4 @@
-<?
+<?php 
 $HTMLPageTitle = "Statistik Liga Primer Indonesia";
 $HTMLMetaDescription = "Statistik Liga Primer Indonesia";
 $HTMLMetaKeywords = "Statistik Liga Primer Indonesia";
@@ -38,7 +38,7 @@ $content=str_replace("club/","http://ligaprimerindonesia.co.id/club/",$content);
 						<div style="float:left;color:white;font-size:20px;margin-top:17px;margin-left:11px;">Statistik Liga Primer Indonesia</div><div style="float:right;align:right;"><img src="http://ligaprimerindonesia.co.id/images/lpiarticle.png" border="0" /></div>
 						<div style="clear:both;"></div>
 					</div>
-<?
+<?php 
 if ($content!="") echo $content;
 ?>
 </div><br><br>
@@ -47,7 +47,7 @@ if ($content!="") echo $content;
 						<div style="float:left;color:white;font-size:20px;margin-top:17px;margin-left:11px;">Jadwal</div><div style="float:right;align:right;"><img src="http://ligaprimerindonesia.co.id/images/lpiarticle.png" border="0" /></div>
 						<div style="clear:both;"></div>
 					</div>
-<?
+<?php 
 $datax=get_data("http://ligaprimerindonesia.co.id/fixture.html");
 $contentx=get_string_between($datax,'<div style="padding-top:10px;">','<div style="background:url(images/fixturetbl3.png) top left no-repeat;width:606px;height:45px;">');
 $contentx='<div style="padding-top:10px;">'.$contentx;
@@ -56,7 +56,7 @@ $contentx=str_replace("news/","http://ligaprimerindonesia.co.id/news/",$contentx
 if ($contentx!="") echo $contentx;
 ?>
 </div>
-<?
+<?php 
 //include (APPPATH."views/inc_sidecontent.php");
 
 echo '

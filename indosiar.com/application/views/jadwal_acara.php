@@ -1,4 +1,4 @@
-<?
+<?php
 $tgljadwal = date("Y-m-d");
 $HTMLPageTitle = "Jadwal Acara";
 $HTMLMetaDescription = 'Jadwal Acara '.date("j F Y",strtotime($tgljadwal));

@@ -1,4 +1,4 @@
-<?
+<?php
 $artikel_url = $this->uri->segment(3);
 $jenis_id 					= 1;
 $jenis_judul 				= "Pengumuman";

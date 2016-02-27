@@ -1,4 +1,4 @@
-<?
+<?php
 $HTMLPageTitle = "Lowongan";
 $HTMLMetaDescription = "Lowongan";
 $HTMLMetaKeywords = "Lowongan";

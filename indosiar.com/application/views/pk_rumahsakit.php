@@ -12,7 +12,7 @@ include (APPPATH."views/pk_top.php");
 	<div class="JudulArtikel">Daftar Rumah Sakit Peduli Kasih</div>
 	<p>&nbsp;</p>
 
-<?
+<?php
 dbconnectpk();
 $sql = "select * from jos_content where trim(left(title,18))='Daftar Rumah Sakit' order by id desc limit 40";
 $result = mysql_query($sql);

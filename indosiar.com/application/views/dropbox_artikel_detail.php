@@ -1,4 +1,4 @@
-<?
+<?php
 $artikel_id = $this->uri->segment(2);
 
 $sql = "select * from worldcup2010_artikel where status_aktif=1 and id=$artikel_id and jenis_id=$jenis_id";

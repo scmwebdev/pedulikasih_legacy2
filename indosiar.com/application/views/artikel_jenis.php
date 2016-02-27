@@ -1,4 +1,4 @@
-<?
+<?php 
 $batas = 10;
 $page = $this->uri->segment(3);
 if ($page == "" || !is_numeric($page)) {

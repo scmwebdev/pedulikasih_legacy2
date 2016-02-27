@@ -42,7 +42,7 @@ ivmandroidRedirect.init({
     alertFrequency: "once"
 }).redirectPage();
 </script>
-<?php
+	php
 if (isset($JSFooter)) echo $JSFooter;
 ?>
 <!--<?=$this->benchmark->elapsed_time();?> sec - <?=$this->benchmark->memory_usage();?>-->

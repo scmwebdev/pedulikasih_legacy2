@@ -1,4 +1,4 @@
-<?
+<?php
 $artikel_id = $this->uri->segment(3);
 
 $sql = "select * from dropbox_artikel where status_aktif=1 and id=$artikel_id and jenis_id=$jenis_id";
@@ -29,7 +29,7 @@ include (APPPATH."views/dropbox_header.php");
 </style>
 <script src="http://www.lautanindonesia.com/js/thickbox.js" type="text/javascript"></script>
 
-<?
+<?php
 echo '
 	<div style="float:left; width:650px;">
 		<div style="margin-bottom:10px;padding:5px;background:#F7EFDF;" class="RoundedBox5px JudulKanal">'.$jenis_judul.'</div>

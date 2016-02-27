@@ -1,4 +1,4 @@
-<?
+<?php 
 $HTMLPageTitle = 'Index Tags';
 $HTMLMetaDescription = 'Index Tags';
 $HTMLMetaKeywords = 'Index Tags';

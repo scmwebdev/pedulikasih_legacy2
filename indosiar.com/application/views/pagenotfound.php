@@ -1,4 +1,4 @@
-<?
+<?php 
 $HTMLPageTitle = "404 Page Not Found";
 $HTMLMetaDescription = '404 Page Not Found';
 $HTMLMetaKeywords = "";
@@ -13,9 +13,9 @@ include (APPPATH."views/inc_header.php");
 <p>&nbsp;</p>
 <script type="text/javascript">
 var GOOG_FIXURL_LANG = 'en';
-var GOOG_FIXURL_SITE = '<?=base_url()?>'
+var GOOG_FIXURL_SITE = '<?php base_url()?>'
 </script>
 <script type="text/javascript" src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
-<?
+<?php 
 include (APPPATH."views/inc_footer.php");
 ?>

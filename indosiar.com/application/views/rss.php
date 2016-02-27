@@ -2,14 +2,14 @@
 header('Content-Type: text/xml');
 echo '<?xml version="1.0" encoding="iso-8859-1"?>' . "\r\n";
 ?>
-<rss version="2.0" xmlns:media="<?=site_url('rss')?>">
+<rss version="2.0" xmlns:media="<?php site_url('rss')?>">
 	<channel>
 		<title>Stasiun TV INDOSIAR</title>
 		<copyright>Copyright (c) 2012 INDOSIAR. All rights reserved.</copyright>
-		<link><?=base_url()?></link>
+		<link><?php base_url()?></link>
 		<description>PT. Indosiar Visual Mandiri - Memang Untuk Anda - TV Indonesia</description>
 		<language>en-us</language> 
-		<lastBuildDate><?=date("D, j M Y H:i:s")?> GMT</lastBuildDate>
+		<lastBuildDate><?php date("D, j M Y H:i:s")?> GMT</lastBuildDate>
 		<ttl>60</ttl> 
 <?php
 	$query = $this->rss_model->showRSS();

@@ -1,4 +1,4 @@
-<?
+<?php 
 //include (ROOTBASEPATH."inc/index_v09.php");
 
 $HTMLPageTitle = "PT. Indosiar Visual Mandiri Memang Untuk Anda | Tv Indonesia";
@@ -12,7 +12,7 @@ include (APPPATH."views/inc_header.php");
 			<div class="RoundedBox5px" style="float:left;width:260px;height:300px;padding:10px;background:#fff;"><div id="hlBOX"></div></div>
 			<div style="float:left; width:310px;">
 				<div style="padding:0 0 5px 10px;" class="JudulKanal">What's On The Week</div>
-<?
+<?php 
 $strID = "";
 $sql = "select id,isi,subjudul,judul,judul_url,ringkasan,jenis_judul,jenis_url,tanggal,img_index,folder,tags,tgl_tayang from ivmweb2009_artikel_data where tgl_tayang<>'0000-00-00 00:00:00' and  UNIX_TIMESTAMP(tgl_robot)>=UNIX_TIMESTAMP() and img_index<>'' and kategori_id=2 order by tgl_robot limit 4";
 $query = $this->db->query($sql);
@@ -80,7 +80,7 @@ $query->free_result();
 	<div style="float:right;width:610px;">
 		<div style="float:left;width:300px;">
 			<div class="JudulKanal">Sinopsis</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,img_list,folder,tags,tgl_tayang from ivmweb2009_artikel_data where tgl_tayang<>'0000-00-00 00:00:00' and UNIX_TIMESTAMP(tgl_robot)>=UNIX_TIMESTAMP() and img_list<>'' and jenis_id=1 $strID order by tgl_robot limit 3";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -103,7 +103,7 @@ $query->free_result();
 		</div>
 		<div style="float:right;width:300px;">
 			<script src="http://adlink.indosiar.com/inc.php?idc=328" type="text/javascript"></script>
-<?
+<?php 
 include ($this->config->item('ROOTBASEPATH')."inc/program_change.php");
 if ($progchange_judul == "") {
 	echo '
@@ -117,7 +117,7 @@ if ($progchange_judul == "") {
 		<div style="clear:both"></div>
 	</div>
 	<div style="float:left;width:300px;">
-<?
+<?php 
 $sql = "select id,subjudul,jenis_id,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and kategori_id=1 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -139,15 +139,15 @@ if ($query->num_rows() > 0) {
 }
 $query->free_result();
 ?>
-<?	echo	$this->article_model->getBanner(326); ?>
+<?php 	echo	$this->article_model->getBanner(326); ?>
 	</div>
 	<div style="clear:both;padding-top:10px;"></div>
 	<div style="float:left;width:300px;margin-right:10px;">
-		<div><a href="<?=site_url('gossip')?>"><img src="<?=$this->config->item('URL_IMG')?>v9-col-gossip.gif" border="0" alt="gossip" title="gossip" /></a></div>
+		<div><a href="<?php site_url('gossip')?>"><img src="<?php $this->config->item('URL_IMG')?>v9-col-gossip.gif" border="0" alt="gossip" title="gossip" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=2 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -161,7 +161,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=2 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 $gos=1;
@@ -179,12 +179,12 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=$this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php $this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<div style="float:left;width:300px;margin-right:10px;">
-		<div><a href="<?=site_url('videofiesta')?>"><img src="<?=$this->config->item('URL_IMG')?>v9-col-kiss.gif" border="0" alt="kiss" title="kiss" /></a></div>
+		<div><a href="<?php site_url('videofiesta')?>"><img src="<?php $this->config->item('URL_IMG')?>v9-col-kiss.gif" border="0" alt="kiss" title="kiss" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
-<?
+<?php 
 //$sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)>=UNIX_TIMESTAMP() and jenis_id=1 $strID order by tgl_robot limit 5";
 $sql="select tblv.*,tblk.kategori from tbl_video as tblv inner join tbl_video_kategori as tblk on tblv.id_kategori=tblk.id and tblk.kategori_url='kiss' order by tblv.id desc limit 7";
 $query = $this->db->query($sql);
@@ -200,15 +200,15 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=$this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php $this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 
 	<div style="float:left;width:300px;">
-		<div><a href="<?=site_url('talk-show')?>"><img src="<?=$this->config->item('URL_IMG')?>v9-col-talkshow.gif" border="0" alt="talkshow" title="talkshow" /></a></div>
+		<div><a href="<?php site_url('talk-show')?>"><img src="<?php $this->config->item('URL_IMG')?>v9-col-talkshow.gif" border="0" alt="talkshow" title="talkshow" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=4 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -222,7 +222,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=4 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -239,15 +239,15 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=$this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php $this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<div style="clear:both;padding-top:10px;"></div>
 	<div style="float:left;width:300px;margin-right:10px;">
-		<div><a href="<?=site_url('fokus')?>"><img src="<?=$this->config->item('URL_IMG')?>v9-col-fokus.gif" border="0" alt="fokus" title="fokus" /></a></div>
+		<div><a href="<?php site_url('fokus')?>"><img src="<?php $this->config->item('URL_IMG')?>v9-col-fokus.gif" border="0" alt="fokus" title="fokus" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=5 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
@@ -262,7 +262,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=5 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -279,14 +279,14 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=$this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php $this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<div style="float:left;width:300px;margin-right:10px;">
-		<div><a href="<?=site_url('patroli')?>"><img src="<?=$this->config->item('URL_IMG')?>v9-col-patroli.gif" border="0" alt="patroli" title="patroli" /></a></div>
+		<div><a href="<?php site_url('patroli')?>"><img src="<?php $this->config->item('URL_IMG')?>v9-col-patroli.gif" border="0" alt="patroli" title="patroli" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=6 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -300,7 +300,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=6 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -317,14 +317,14 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=$this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php $this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<div style="float:left;width:300px;">
-		<div><a href="<?=site_url('ragam')?>"><img src="<?=$this->config->item('URL_IMG')?>v9-col-ragam.gif" border="0" alt="ragam" title="ragam" /></a></div>
+		<div><a href="<?php site_url('ragam')?>"><img src="<?php $this->config->item('URL_IMG')?>v9-col-ragam.gif" border="0" alt="ragam" title="ragam" /></a></div>
 		<div style="height:300px;padding:0px 10px;border-left:1px solid #ccc;border-right:1px solid #ccc;">
 			<div style="padding:10px 0;">
 				<b>Tags:</b> 
-<?
+<?php 
 $sql = "select tags,tags_url from ivmweb2009_artikel_tags where jenis_id=3 group by tags order by rand() limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -338,7 +338,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-<?
+<?php 
 $sql = "select id,subjudul,judul,judul_url,jenis_judul,jenis_url,tanggal,tgl_tayang from ivmweb2009_artikel_data where UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and jenis_id=3 $strID order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
@@ -355,7 +355,7 @@ if ($query->num_rows() > 0) {
 $query->free_result();
 ?>
 		</div>
-		<div><img src="<?=$this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
+		<div><img src="<?php $this->config->item('URL_IMG')?>v9-col-closer.gif" border="0" alt="column closer" title="column closer" /></div>
 	</div>
 	<div style="clear:both"></div>
 </div>
@@ -425,7 +425,7 @@ $query->free_result();
 	</div>
 	<div style="float:left;width:300px;margin-right:10px;">
 		<div class="JudulKanal">Video</div>
-<?
+<?php 
 $sql="select tblv.*,tblk.kategori from tbl_video as tblv inner join tbl_video_kategori as tblk on tblv.id_kategori=tblk.id and tblk.kategori_url='dancing-with-the-stars' order by tblv.id desc limit 6";
 //$sql="select tblv.*,tblk.kategori from tbl_video as tblv inner join tbl_video_kategori as tblk on tblv.id_kategori=tblk.id and lower(left(tblv.judul,10))='the dating' order by tblv.id desc limit 2"; 	 
 $query = $this->db->query($sql);
@@ -493,7 +493,7 @@ $query->free_result();
 		  <div style="margin-top:10px"><script src="http://adlink.indosiar.com/inc.php?idc=305" type="text/javascript"></script></div>
 		</div>
 	</div>
-<?
+<?php 
 include (APPPATH."views/inc_footer.php");
 ?>
 <script language="JavaScript" src="http://www.ltassrv.com/serve/api5.4.asp?d=281&s=318&c=1295&v=1"></script>

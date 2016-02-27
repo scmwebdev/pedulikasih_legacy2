@@ -1,4 +1,4 @@
-<?
+<?php 
 $HTMLPageTitle = "Sepeda Ria 2011";
 $HTMLMetaDescription = "Sepeda Ria 2011";
 $HTMLMetaKeywords = "sepeda ria,fun";
@@ -18,7 +18,7 @@ include (APPPATH."views/inc_header.php");
 	</div>
 	<div style="float:right;width:300px;">
 
-<?
+<?php 
 include (APPPATH."views/inc_sidecontent.php");
 
 echo '

@@ -664,10 +664,10 @@ a:hover {text-decoration: none;}
 </style>
 <div class="JudulKanal" style="padding:5px 10px 5px 0px;border-bottom:1px solid #999;">Sahabat Bin14ang</div>
 <div style="border:2px solid #D80E12;">
-	<div id="SBBox" style="padding:5px;"><?include (ROOTBASEPATH."inc/shoutbox.php")?></div>
+	<div id="SBBox" style="padding:5px;"><?php include (ROOTBASEPATH."inc/shoutbox.php") ?></div>
 	<div style="padding:10px; background:#EFEFEF;" align="center">  
 		<table border="0" cellspacing="0" cellpadding="2">
-		  <form action="<?=site_url("shoutbox/submit")?>" method="post" name="frmSB" id="frmSB">
+		  <form action="<?php site_url("shoutbox/submit")?>" method="post" name="frmSB" id="frmSB">
 			<tr><td align="right">* Nama:</td><td align="left"><input id="SBNama" name="SBNama" size="30" value="" /></td></tr>
 			<tr><td align="right">* Email:</td><td align="left"><input id="SBEmail" name="SBEmail" size="30" value="" /></td></tr>
 			<tr><td align="right">Website:</td><td align="left">http://<input id="SBWebsite" name="SBWebsite" size="30" value="" /></td></tr>
@@ -719,7 +719,7 @@ a:hover {text-decoration: none;}
 	});
 	function ShowSB() {
 		 
-		 surl = "<?=site_url("shoutbox")?>";
+		 surl = "<?php site_url("shoutbox")?>";
 		 $.ajax({
 		   type: "GET",
 		   url: surl,

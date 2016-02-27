@@ -1,4 +1,4 @@
-<?php
+<?php 
 $HTMLPageTitle          = (isset($HTMLPageTitle)) ? htmlspecialchars(character_limiter(strip_tags(trim($HTMLPageTitle)),69,''),ENT_QUOTES) : "";
 $HTMLPageImage          = (isset($HTMLPageImage)) ? $HTMLPageImage : base_url().'assets/images/logo-96.png';
 $HTMLMetaDescription    = (isset($HTMLMetaDescription)) ? htmlspecialchars(strip_tags($HTMLMetaDescription),ENT_QUOTES) : "";
@@ -7,9 +7,9 @@ $curURL = (isset($HTMLCanonical)) ? $HTMLCanonical : 'http://'.$_SERVER['SERVER_
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-<title><?=$HTMLPageTitle?></title>
-<meta name="description" content="<?=$HTMLMetaDescription?>" />
-<meta name="keywords" content="<?=$HTMLMetaKeywords?>" />
+<title><?php $HTMLPageTitle?></title>
+<meta name="description" content="<?php $HTMLMetaDescription?>" />
+<meta name="keywords" content="<?php $HTMLMetaKeywords?>" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="robots" content="all" />
 <meta name="google-site-verification" content="YCqKTsMAsI6Feo3WXhb5r5zzmOBQ4XSK01PMc-yl6Mk" />
@@ -18,15 +18,15 @@ $curURL = (isset($HTMLCanonical)) ? $HTMLCanonical : 'http://'.$_SERVER['SERVER_
 <meta property="fb:app_id"      content="209188075876033" />
 <meta property="og:site_name"   content="INDOSIAR.COM" />
 <meta property="og:type"        content="article" />
-<meta property="og:url"         content="<?=$curURL?>" />
-<meta property="og:title"       content="<?=$HTMLPageTitle?>" />
-<meta property="og:description" content="<?=$HTMLMetaDescription?>" />
-<meta property="og:image"       content="<?=$HTMLPageImage?>" />
-<?
+<meta property="og:url"         content="<?php $curURL?>" />
+<meta property="og:title"       content="<?php $HTMLPageTitle?>" />
+<meta property="og:description" content="<?php $HTMLMetaDescription?>" />
+<meta property="og:image"       content="<?php $HTMLPageImage?>" />
+<?php 
 if (isset($HTMLCanonical) && $HTMLCanonical != site_url($_SERVER['REQUEST_URI'])) echo '<link rel="canonical" href="'.$HTMLCanonical.'" />'."\r\n";
 ?>
 <link rel="SHORTCUT ICON" type="image/x-icon" href="/favicon.ico" />
-<link rel="alternate" type="application/rss+xml" title="Indosiar" href="<?=site_url()?>rss" />
+<link rel="alternate" type="application/rss+xml" title="Indosiar" href="<?php site_url()?>rss" />
 <link rel="stylesheet" href="/css/v09.css?v2" type="text/css">
 <link rel="stylesheet" href="/assets/css/fb.css?v1" />
 <script type="text/javascript" src="/js/jquery.js"></script>
@@ -45,26 +45,26 @@ $(function(){
     $("div.RoundedBoxTLBLBR5px").corner("tl 5px").corner("bl 5px").corner("br 5px");
 });
 
-var base_url 		= '<?=base_url()?>';
-var cur_url			= '<?=$curURL?>';
-var page_title	    = '<?=$HTMLPageTitle?>';
-var page_desc		= '<?=$HTMLMetaDescription?>';
-var page_image	    = '<?=$HTMLPageImage?>';
-var page_id	        = <?=(isset($page_id)) ? $page_id : '0'?>;
+var base_url 		= '<?php base_url()?>';
+var cur_url			= '<?php $curURL?>';
+var page_title	    = '<?php $HTMLPageTitle?>';
+var page_desc		= '<?php $HTMLMetaDescription?>';
+var page_image	    = '<?php $HTMLPageImage?>';
+var page_id	        = <?php (isset($page_id)) ? $page_id : '0'?>;
 var perms 			= ['email','publish_actions','publish_stream','read_stream','read_friendlists','user_birthday','user_likes','user_online_presence','user_actions.news','user_actions.video'];
-var auth_url 		= 'https://www.facebook.com/dialog/oauth?client_id=209188075876033&redirect_uri=<?=urlencode($curURL)?>&scope=' + perms.join(',') + '&response_type=token';
+var auth_url 		= 'https://www.facebook.com/dialog/oauth?client_id=209188075876033&redirect_uri=<?php urlencode($curURL)?>&scope=' + perms.join(',') + '&response_type=token';
 var fbAppID         = '209188075876033';
 var fbUserID 		= '';
 var fbUserToken	    = '';
-var isNewsReads	    = <?=(isset($isNewsReads)) ? 'true' : 'false'?>;
-var isVideoWatches	= <?=(isset($isVideoWatches)) ? 'true' : 'false'?>;
+var isNewsReads	    = <?php (isset($isNewsReads)) ? 'true' : 'false'?>;
+var isVideoWatches	= <?php (isset($isVideoWatches)) ? 'true' : 'false'?>;
 </script>
 </head>
 <body>
 <div id="fb-root"></div>
 <div style="background:transparent url(/img/v9-bgwrap.gif) center top no-repeat;">
 <div id="headerbanner">
-	<div style="margin:0 auto;width:940px;height:50px;background:#fff;text-align:center;"><?php
+	<div style="margin:0 auto;width:940px;height:50px;background:#fff;text-align:center;"><?php 
 $now = date("Y-m-d h:i:s");
 $start = "2012-07-11 13:00:00";
 $end = "2012-07-12 13:00:00";
@@ -79,8 +79,8 @@ echo $this->banner_model->getBanner(320);
 	<div style="float:left;width:600px;margin-top:5px;margin-left:10px;">
 		<table cellpadding="0" cellspacing="0">
 			<tr>
-				<td><a href="<?=site_url()?>">HOME</a> | <a href="<?=site_url('berita')?>">BERITA</a> | <a href="<?=site_url('info-untuk-anda')?>">INFO UNTUK ANDA</a> | <a href="http://tv.liputan6.com/watch/indosiar" target="_blank"><span style="color:#006600;text-decoration:blink;">LIVE STREAMING</span></a> | <a href="<?=site_url('lowongan')?>"><span style="color: #FF0000">LOWONGAN</span></a></td>
-				<td><div style="margin:0 5px"><a href="<?=site_url('rss')?>"><img src="/img/rss.gif" heigh="10" border="0"></a></div></td>
+				<td><a href="<?php site_url()?>">HOME</a> | <a href="<?php site_url('berita')?>">BERITA</a> | <a href="<?php site_url('info-untuk-anda')?>">INFO UNTUK ANDA</a> | <a href="http://tv.liputan6.com/watch/indosiar" target="_blank"><span style="color:#006600;text-decoration:blink;">LIVE STREAMING</span></a> | <a href="<?php site_url('lowongan')?>"><span style="color: #FF0000">LOWONGAN</span></a></td>
+				<td><div style="margin:0 5px"><a href="<?php site_url('rss')?>"><img src="/img/rss.gif" heigh="10" border="0"></a></div></td>
 				<td><div class="g-plusone" data-size="small" data-annotation="none"></div></td>
 			</tr>
 		</table>
@@ -93,20 +93,20 @@ echo $this->banner_model->getBanner(320);
 	  </form>
 	</div>
 	<div style="clear:both">
-		<div style="float:left;width:150px;"><a href="<?=site_url()?>"><img src="/img/logo-v12-new.png" alt="indosiar dot com" border="0" /></a></div>
-		<div style="float:right;width:750px;margin:20px 10px 0 0;text-align:right;"><?=$this->banner_model->getBanner(322)?></div>
+		<div style="float:left;width:150px;"><a href="<?php site_url()?>"><img src="/img/logo-v12-new.png" alt="indosiar dot com" border="0" /></a></div>
+		<div style="float:right;width:750px;margin:20px 10px 0 0;text-align:right;"><?php $this->banner_model->getBanner(322)?></div>
 	</div>
 </div>
 <div class="header-menu" style="background:#EFEFEF">
-	<a href="<?=site_url('fokus')?>">FOKUS</a> | <a href="<?=site_url('patroli')?>">PATROLI</a> | <a href="<?=site_url('ragam')?>">RAGAM</a> | <a href="<?=site_url('gossip')?>">GOSSIP</a> | <a href="<?=site_url('sinopsis')?>">SINOPSIS</a> | <span class="header-menu-other"><a href="<?=site_url('daua')?>">RESPOND ONLINE</a> | <a href="<?=site_url('indosiarpeduli')?>">INDOSIAR PEDULI</a> | <a href="<?=site_url('corporate')?>">CORPORATE INFO</a></span> 
+	<a href="<?php site_url('fokus')?>">FOKUS</a> | <a href="<?php site_url('patroli')?>">PATROLI</a> | <a href="<?php site_url('ragam')?>">RAGAM</a> | <a href="<?php site_url('gossip')?>">GOSSIP</a> | <a href="<?php site_url('sinopsis')?>">SINOPSIS</a> | <span class="header-menu-other"><a href="<?php site_url('daua')?>">RESPOND ONLINE</a> | <a href="<?php site_url('indosiarpeduli')?>">INDOSIAR PEDULI</a> | <a href="<?php site_url('corporate')?>">CORPORATE INFO</a></span> 
 </div>
 <div class="container">
-<?php
+<?php 
 if (!isset($no_fb_timeline)) {
 ?>
     <div id="fbContainer">
     	<div id="fbContentBox"></div>
     </div>
-<?
+<?php 
 }
 ?>

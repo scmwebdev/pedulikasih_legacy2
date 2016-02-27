@@ -12,7 +12,7 @@ include (APPPATH."views/pk_top.php");
 	<div class="JudulArtikel">Berita Peduli Kasih</div>
 	<p>&nbsp;</p>
 
-<?
+<?php
 dbconnectpk();
 $sql = "select * from jos_content where sectionid=13 order by id desc limit 20";
 $result = mysql_query($sql);

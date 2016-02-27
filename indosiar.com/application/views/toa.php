@@ -1,4 +1,4 @@
-<?
+<?php 
 include (APPPATH."views/dropbox_header.php");
 ?>
 	<div style="float:left; width:650px;">
@@ -97,10 +97,10 @@ include (APPPATH."views/dropbox_header.php");
 	  </form>
 	</div>
 	<div style="float:right; width:270px;">
-<?
+<?php 
 include (APPPATH."views/dropbox_inc_samping.php");
 ?>
 	</div>
-<?
+<?php 
 include (APPPATH."views/dropbox_footer.php");
 ?>

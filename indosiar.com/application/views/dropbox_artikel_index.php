@@ -1,4 +1,4 @@
-<?
+<?php
 $HTMLPageTitle = $jenis_judul;
 include (APPPATH."views/dropbox_header.php");
 

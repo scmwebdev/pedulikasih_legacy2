@@ -1,4 +1,4 @@
-<?
+<?php 
 $HTMLPageTitle = "Peduli Kasih";
 $HTMLMetaDescription = "Peduli Kasih Indosiar";
 $HTMLMetaKeywords = "peduli kasih,humanity";
@@ -14,7 +14,7 @@ include (APPPATH."views/inc_header.php");
 	</div>
 	<div style="float:right;width:300px;">
 
-<?
+<?php 
 include (APPPATH."views/inc_sidecontent.php");
 
 echo '

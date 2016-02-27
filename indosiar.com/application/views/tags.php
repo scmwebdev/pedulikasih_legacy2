@@ -1,4 +1,4 @@
-<?
+<?php 
 $tags_url 				= $this->uri->segment(2);
 
 if ($tags_url != "")

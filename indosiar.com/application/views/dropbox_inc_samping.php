@@ -6,7 +6,7 @@
 </style>	
 <div style="padding:10px">
 	<div align="center"><img src="http://www.indosiar.com/images/dropbox/logo-elex200.gif" width="200" height="133" /></div>
-<?	
+<?php
 $sql = "SELECT jenis,tanggal,id,subjudul,judul,judul_url,jenis_judul,jenis_url,img_menu,folder FROM ivmweb_artikel_main WHERE UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() and img_menu<>'' and kategori=1 and jenis=54 order by tgl_robot desc limit 5";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {

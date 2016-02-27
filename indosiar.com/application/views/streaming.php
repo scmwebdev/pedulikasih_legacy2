@@ -1,4 +1,4 @@
-<?php
+<?php 
 $HTMLPageTitle= "INDOSIAR Live Streaming";
 $HTMLMetaDescription = "INDOSIAR Live TV Streaming";
 $HTMLMetaKeywords = "indosiar streaming";
@@ -37,6 +37,6 @@ include (APPPATH."views/inc_header.php");
 			    ]
 			  });
 			</script>	
-<?
+<?php 
 include (APPPATH."views/inc_footer.php");
 ?>

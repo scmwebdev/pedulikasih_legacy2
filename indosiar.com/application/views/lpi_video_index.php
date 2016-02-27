@@ -13,7 +13,7 @@ include (APPPATH."views/lpi_top.php");
 	<div class="JudulArtikel">Video Liga Primer Indonesia</div>
 	<p>&nbsp;</p>
 	
-<?
+<?php
 $url = 'http://gdata.youtube.com/feeds/api/videos?vq=%22liga+primer+indonesia%22&racy=exclude&orderby=relevance&start-index=1&max-results=10';
 $data = grab_url($url);
 

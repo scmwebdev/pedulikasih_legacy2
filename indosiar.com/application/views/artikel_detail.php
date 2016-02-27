@@ -1,4 +1,4 @@
-<?
+<?php 
 session_start();
 $sql = "select * from ivmweb2009_artikel_data where id=$artikel_id";
 $query = $this->db->query($sql);
@@ -184,14 +184,14 @@ include (APPPATH."views/inc_header.php");
 ?>
 		<div><!-- AddThis Button BEGIN -->
 <script type="text/javascript">var addthis_pub="kewell";</script>
-<a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', 'http://<?=$_SERVER["HTTP_HOST"].$_SERVER['REQUEST_URI']?>', '<?=$artikel_judul?>')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
+<a href="http://www.addthis.com/bookmark.php?v=20" onmouseover="return addthis_open(this, '', 'http://<?php $_SERVER["HTTP_HOST"].$_SERVER['REQUEST_URI']?>', '<?php $artikel_judul?>')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/></a><script type="text/javascript" src="http://s7.addthis.com/js/200/addthis_widget.js"></script>
 <!-- AddThis Button END -->
 	</div>
 			<div style="clear:both"></div>
 			<br /><br />
 			<div style="padding:10px;border:1px solid #ccc;">
 				<div id="theArtikelComments">
-<?
+<?php 
 		// --- LIST KOMENTAR ---- //
 		$batas = 10;
 		$page = 1;
@@ -242,9 +242,9 @@ include (APPPATH."views/inc_header.php");
 				</div>
 									
 	        <div style="padding:10px;background:#efefef;" id="CommentsBoxInput" class="RoundedBox8px">
-							<form action="<?=site_url("komentarsubmit")?>" method="post" name="frmArtikelKomentar" id="frmArtikelKomentar"> 
+							<form action="<?php site_url("komentarsubmit")?>" method="post" name="frmArtikelKomentar" id="frmArtikelKomentar"> 
 		        <table border="0" cellpadding="2" cellspacing="0" align="center">
-		      		<input name="artikel_id" type="hidden" value="<?=$artikel_id?>" />
+		      		<input name="artikel_id" type="hidden" value="<?php $artikel_id?>" />
 		      		<tr>
 		            <td><b>Nama:</b></td><td><input type="text" name="nama" size="40" /></td>
 		          </tr>
@@ -257,7 +257,7 @@ include (APPPATH."views/inc_header.php");
 					<tr>
 					<td valign="top"><b>Security Code:</b></td>
 		            <td>
-        <?php
+        <?php 
           require_once($this->config->item('ROOTBASEPATH').'phpx/recaptchalib.php');
           echo recaptcha_get_html(RECAPTCHA_PUBLIC_KEY);
         ?>
@@ -273,8 +273,8 @@ include (APPPATH."views/inc_header.php");
 		      </div>
        </div>
 
-				<script type="text/javascript" src="<?=$this->config->item('URL_JS')?>jquery.form.js"></script>
-				<script type="text/javascript" src="<?=$this->config->item('URL_JS')?>jquery.blockUI.js"></script>
+				<script type="text/javascript" src="<?php $this->config->item('URL_JS')?>jquery.form.js"></script>
+				<script type="text/javascript" src="<?php $this->config->item('URL_JS')?>jquery.blockUI.js"></script>
 				<script language="javascript">
 				$().ajaxStop($.unblockUI); 
 				
@@ -312,7 +312,7 @@ include (APPPATH."views/inc_header.php");
 				
 				function ShowCommentsList(page) {
 					 
-					 surl = "<?=site_url('komentarlist')."/"?>" + <?=$artikel_id?> + "/" + page;
+					 surl = "<?php site_url('komentarlist')."/"?>" + <?php $artikel_id?> + "/" + page;
 					 $.ajax({
 					   type: "GET",
 					   url: surl,
@@ -330,7 +330,7 @@ include (APPPATH."views/inc_header.php");
 				//ShowCommentsList(1);
 				//ShowIklanKolomList();
 				</script>
-<?
+<?php 
 		echo '
 			</div>
 			<div class="side-container">
@@ -388,9 +388,9 @@ include (APPPATH."views/inc_header.php");
 var w=screen.width;
 var h=screen.height;
 var r=document.referrer;
-document.write('<ifr'+'ame src='+'"/phpx/stats.php?d=<?=$artikel_id?>&amp;w='+w+'&amp;h='+h+'&amp;r='+r+'"'+' marginwidth="0" marginheight="0" width='+'"1"'+' height='+'"1"'+' border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>');
+document.write('<ifr'+'ame src='+'"/phpx/stats.php?d=<?php $artikel_id?>&amp;w='+w+'&amp;h='+h+'&amp;r='+r+'"'+' marginwidth="0" marginheight="0" width='+'"1"'+' height='+'"1"'+' border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>');
 </script>
 
-<?			
+<?php 			
 include (APPPATH."views/inc_footer.php");
 ?>

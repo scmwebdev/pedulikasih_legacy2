@@ -1,4 +1,4 @@
-<?
+<?php
 $HTMLPageTitle = "The Chef Indonesia";
 $HTMLMetaDescription = "The Chef Indonesia";
 $HTMLMetaKeywords = "The Chef Indonesia";

@@ -1,4 +1,4 @@
-<?
+<?php 
 $tmpText = '
 <marquee direction="up" height="300" id="ox" onmouseout="ox.start();" onmouseover="ox.stop();" scrollamount="1" scrolldelay="70" truespeed="trueSpeed">';
 $sql = "select * from shoutbox where status_aktif=1 and jenis='hut14' order by id desc limit 20";

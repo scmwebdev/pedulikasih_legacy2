@@ -1,4 +1,4 @@
-<?php
+<?php php
 $sitename = "Transmisi Indosiar";
 $HTMLPageTitle = "Transmisi Indosiar";
 $HTMLMetaDescription = "Transmisi Indosiar";
@@ -1577,6 +1577,6 @@ $('map > area').tooltip({
   </table>
 </p>
 </div>
-<?
+<?php 
 include (APPPATH."views/inc_footer.php");
 ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 if (!isset($_REQUEST['nama']) || empty($_REQUEST['nama']) || !isset($_REQUEST['subjek']) || empty($_REQUEST['subjek']) || !isset($_REQUEST['pertanyaan']) || empty($_REQUEST['pertanyaan'])) {
 	echo "Error!";
 } else {

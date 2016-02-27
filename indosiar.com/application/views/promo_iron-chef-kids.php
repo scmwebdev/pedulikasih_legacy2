@@ -1,4 +1,4 @@
-<?
+<?php
 $HTMLPageTitle = "Iron Chef Kids";
 $HTMLMetaDescription = "Iron Chef Kids";
 $HTMLMetaKeywords = "Iron Chef Kids";

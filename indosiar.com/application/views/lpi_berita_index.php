@@ -11,7 +11,7 @@ include (APPPATH."views/lpi_top.php");
 	<div class="JudulArtikel">Berita Liga Primer Indonesia</div>
 	<p>&nbsp;</p>
 
-<?
+<?php
 $sql = "select img_list,jenis_url,folder,id,judul,judul_url,subjudul,ringkasan from ivmweb2009_artikel_data where isi like '%liga primer%' and UNIX_TIMESTAMP(tgl_robot)<=UNIX_TIMESTAMP() order by id desc limit 10";
 $query = $this->db->query($sql);
 if ($query->num_rows() > 0) {
