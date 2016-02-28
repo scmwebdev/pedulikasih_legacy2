@@ -142,7 +142,7 @@ class Cron extends CI_Controller {
 						$data   = "";
 						$mege   = imap_fetchbody($mbox,$msgno,$fpos);
 
-						$sql = "SELECT log_id FROM ".$jenis."_bca_log WHERE log_from='".mysql_real_escape_string($from)."' AND log_subject='".mysql_real_escape_string($subject)."' AND log_date='$date'";
+						$sql = "SELECT log_id FROM ".$jenis."_bca_log WHERE log_from='".mysqli_real_escape_string($from)."' AND log_subject='".mysqli_real_escape_string($subject)."' AND log_date='$date'";
 						$query = $this->db->query($sql);
 						if ($query->num_rows() > 0) {
 							$query->free_result();
@@ -217,7 +217,7 @@ class Cron extends CI_Controller {
     			      						}*/
 			      							    
 			      							    
-			      							$sql = "INSERT INTO ".$jenis."_bca (ID2,KOTA,NAMA,NILAI,TANGGAL,KATEGORI) VALUES ($ID2,'".mysql_real_escape_string($KOTA)."','".mysql_real_escape_string($NAMA)."','$NILAI','$TANGGAL','person')";
+			      							$sql = "INSERT INTO ".$jenis."_bca (ID2,KOTA,NAMA,NILAI,TANGGAL,KATEGORI) VALUES ($ID2,'".mysqli_real_escape_string($KOTA)."','".mysqli_real_escape_string($NAMA)."','$NILAI','$TANGGAL','person')";
                                             $this->db->simple_query($sql);
                                             
 											echo "$ID2, $KOTA, $NAMA, $NILAI, $TANGGAL \r\n";
@@ -227,7 +227,7 @@ class Cron extends CI_Controller {
 			      					}
     			      			}
     			      			
-    		      				$sql = "INSERT INTO ".$jenis."_bca_log(log_id,log_from,log_subject,log_date) VALUES('','".mysql_real_escape_string($from)."','".mysql_real_escape_string($subject)."','$date')";
+    		      				$sql = "INSERT INTO ".$jenis."_bca_log(log_id,log_from,log_subject,log_date) VALUES('','".mysqli_real_escape_string($from)."','".mysqli_real_escape_string($subject)."','$date')";
     		      				$this->db->simple_query($sql);
 							}
 						}
