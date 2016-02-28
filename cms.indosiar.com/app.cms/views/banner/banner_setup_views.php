@@ -1,9 +1,9 @@
 <script type="text/javascript">
-var mod_url = '<?=$_SERVER['REQUEST_URI']?>';
+var mod_url = '<?php $_SERVER['REQUEST_URI']?>';
 
 Ext.onReady(function(){		
 		var itemsPerPage = 50;
-		var curDate = '<?=date("Y-m-d")?>';
+		var curDate = '<?php date("Y-m-d")?>';
 		var winForm, activeForm;
 	  	   
 		Ext.define('modelFormbanner', {

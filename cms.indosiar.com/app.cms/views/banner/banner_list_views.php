@@ -1,15 +1,15 @@
 <script type="text/javascript">
-var mod_url = '<?=$_SERVER['REQUEST_URI']?>';
+var mod_url = '<?php $_SERVER['REQUEST_URI']?>';
 
 Ext.onReady(function(){		
 		var itemsPerPage = 50;
-		var curDate = '<?=date("Y-m-d")?>';
+		var curDate = '<?php date("Y-m-d")?>';
 		var winForm, activeForm;
 	  	
   
 	  function addData() {     
 	  		sessChecked();
-	  		<?=$this->banner_model->formeditor('formInputAdd','formeditoraddid','winForm')?> 
+	  		<?php $this->banner_model->formeditor('formInputAdd','formeditoraddid','winForm')?> 
 	      formInputAdd.getForm().reset();
 				formInputAdd.getForm().loadRecord(Ext.create('modelForm', {							        
 		        'b_id'    		: '',
@@ -41,7 +41,7 @@ Ext.onReady(function(){
 	  
 	  function editData(data_id) {	
 	  		sessChecked();	
-	  		<?=$this->banner_model->formeditor('formInputEdit','formeditoreditid','winForm')?>
+	  		<?php $this->banner_model->formeditor('formInputEdit','formeditoreditid','winForm')?>
 				var selection = gridData.getView().getSelectionModel().getSelection()[0];
 		    if (selection) {
 		          data_id = gridData.getSelectionModel().selected.items[0].data.id;
