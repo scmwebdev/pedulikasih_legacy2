@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 //$config['base_url']	= 'http://www.indosiar.com';
-$config['base_url']	= 'http://www.indosiar.com/';
+$config['base_url']	= 'http://localhost/index.php';
 $config['index_page'] = '';
 $config['uri_protocol']	= 'AUTO';
 $config['url_suffix'] = '';
@@ -14,8 +14,8 @@ $config['enable_query_strings'] = FALSE;
 $config['controller_trigger']	= 'c';
 $config['function_trigger']		= 'm';
 $config['directory_trigger']	= 'd'; // experimental not currently in use
-$config['log_threshold'] = 0;
-$config['log_path'] = '';
+$config['log_threshold'] = 1;
+$config['log_path'] = '/usr/share/nginx/www/indosiar.com/';
 $config['log_date_format'] = 'Y-m-d H:i:s';
 $config['cache_path'] = '';
 $config['encryption_key'] = 'Ind@51AR';

@@ -2,9 +2,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = "192.168.7.97";
-$db['default']['username'] = "ivmreader";
-$db['default']['password'] = "is0m@cO0n1y#WwW";
+$db['default']['hostname'] = "localhost";
+$db['default']['username'] = "root";
+$db['default']['password'] = "root";
 $db['default']['database'] = "indosiar_www";
 $db['default']['dbdriver'] = "mysql";
 $db['default']['dbprefix'] = '';
@@ -18,9 +18,9 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = FALSE;
 $db['default']['stricton'] = FALSE;
 
-$db['dbwrite']['hostname'] = "192.168.7.97";
-$db['dbwrite']['username'] = "frontindosiar";
-$db['dbwrite']['password'] = "P@ssw0rdd3p@nWWW";
+$db['dbwrite']['hostname'] = "localhost";
+$db['dbwrite']['username'] = "root";
+$db['dbwrite']['password'] = "root";
 $db['dbwrite']['database'] = "indosiar_www";
 $db['dbwrite']['dbdriver'] = "mysql";
 $db['dbwrite']['dbprefix'] = '';

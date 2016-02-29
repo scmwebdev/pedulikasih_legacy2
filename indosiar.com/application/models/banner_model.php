@@ -52,7 +52,7 @@ class Banner_model extends CI_Model {
 								}
 								$query->free_result();
 
-								$id=$banner_id;
+								$id = $banner_id;
 
 								if ($banjenis=="image") {
 									if ($tanggal_akhir>date("Y-m-d H:i:s")) {

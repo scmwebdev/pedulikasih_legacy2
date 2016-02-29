@@ -20,8 +20,8 @@ $this->session->set_userdata('kategori',$kategori);
 	<div class="JudulArtikel">Transfer BCA Perorangan Kita Peduli</div>
 	<p>&nbsp;</p>
 <table border="0" cellspacing="1" cellpadding="2" width="100%">
-  <form action="<?php  site_url('kitapeduli/bcaperorangan')?>" method=post name="form1">
-  	<input type="hidden" name="kategori" value="<?php  $kategori?>" />
+  <form action="<?php echo site_url('kitapeduli/bcaperorangan')?> " method=post name="form1">
+  	<input type="hidden" name="kategori" value="<?php echo $kategori; ?>" />
     <tr> 
       <td align="center" bgcolor="#FFFFFF"><b>Kata Kunci</b> 
         <select name="jenis">
@@ -35,8 +35,8 @@ $this->session->set_userdata('kategori',$kategori);
       </td>
     </tr>
   </form>
-  <form action="<?php  site_url('kitapeduli/bcaperorangan')?>" method=post name="form2">
-  <input type="hidden" name="kategori" value="<?php  $kategori?>" />
+  <form action="<?php echo site_url('kitapeduli/bcaperorangan') ?>" method=post name="form2">
+  <input type="hidden" name="kategori" value="<?php echo $kategori ?>" />
     <tr> 
       <td align="center" bgcolor="#FFFFFF"><b>Nilai Antara</b> 
         <input type="text" name="satu" onBlur="chknum(document.form2.satu)">
