@@ -98,7 +98,7 @@ echo $this->banner_model->getBanner(320);
 	</div>
 </div>
 <div class="header-menu" style="background:#EFEFEF">
-	<a href="<?php site_url('fokus')?>">FOKUS</a> | <a href="<?php site_url('patroli')?>">PATROLI</a> | <a href="<?php site_url('ragam')?>">RAGAM</a> | <a href="<?php site_url('gossip')?>">GOSSIP</a> | <a href="<?php site_url('sinopsis')?>">SINOPSIS</a> | <span class="header-menu-other"><a href="<?php site_url('daua')?>">RESPOND ONLINE</a> | <a href="<?php site_url('indosiarpeduli')?>">INDOSIAR PEDULI</a> | <a href="<?php site_url('corporate')?>">CORPORATE INFO</a></span> 
+    <!-- <a href="<?php site_url('fokus')?>">FOKUS</a> | <a href="<?php site_url('patroli')?>">PATROLI</a> | <a href="<?php site_url('ragam')?>">RAGAM</a> | <a href="<?php site_url('gossip')?>">GOSSIP</a> | <a href="<?php site_url('sinopsis')?>">SINOPSIS</a> | <span class="header-menu-other"><a href="<?php site_url('daua')?>">RESPOND ONLINE</a> |  --><a href="<?php site_url('indosiarpeduli')?>">INDOSIAR PEDULI</a> <!-- | <a href="<?php site_url('corporate')?>">CORPORATE INFO</a></span> -->
 </div>
 <div class="container">
 <?php 

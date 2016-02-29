@@ -234,6 +234,6 @@ $(function(){
 	</div>
 </div>
 <div class="header-menu" style="background:#EFEFEF">
-	<a href="<?php site_url('fokus')?>">FOKUS</a> | <a href="<?php site_url('patroli')?>">PATROLI</a> | <a href="<?php site_url('ragam')?>">RAGAM</a> | <a href="<?php site_url('gossip')?>">GOSSIP</a> | <a href="<?php site_url('sinopsis')?>">SINOPSIS</a> | <a href="<?php site_url('talk-show')?>">TALK SHOW</a> | <a href="<?php site_url('kolom')?>">KOLOM</a> | <span class="header-menu-other"><a href="http://www.indosiar.com/daua">RESPOND ONLINE</a> | <a href="http://www.indosiar.com/peduli-kasih/">PEDULI KASIH</a> | <a href="http://ww1.indosiar.com/v4/kitapeduli/">KITA PEDULI</a> | <a href="http://ww1.indosiar.com/investor/">INVESTOR RELATION</a></span>
+	<!-- <a href="<?php site_url('fokus')?>">FOKUS</a> | <a href="<?php site_url('patroli')?>">PATROLI</a> | <a href="<?php site_url('ragam')?>">RAGAM</a> | <a href="<?php site_url('gossip')?>">GOSSIP</a> | <a href="<?php site_url('sinopsis')?>">SINOPSIS</a> | <a href="<?php site_url('talk-show')?>">TALK SHOW</a> | <a href="<?php site_url('kolom')?>">KOLOM</a> | <span class="header-menu-other"><a href="http://www.indosiar.com/daua">RESPOND ONLINE</a>  -->| <a href="http://www.indosiar.com/peduli-kasih/">PEDULI KASIH</a> | <a href="http://ww1.indosiar.com/v4/kitapeduli/">KITA PEDULI</a> | <!-- <a href="http://ww1.indosiar.com/investor/">INVESTOR RELATION</a></span> -->
 </div>
 <div class="container">
