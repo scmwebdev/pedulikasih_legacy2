@@ -19,6 +19,7 @@ date_default_timezone_set('Asia/Jakarta');
  *
  */
 	define('ENVIRONMENT', 'production');
+	date_default_timezone_set('Asia/Jakarta');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -33,16 +34,16 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-			error_reporting(E_ALL);
-		break;
-	
-		case 'testing':
-		case 'production':
-			error_reporting(0);
-		break;
-
-		default:
-			exit('The application environment is not set correctly.');
+            error_reporting(E_ALL);
+            ini_set('display_errors', 1);
+        break;
+        case 'production':
+            #error_reporting(0);
+            error_reporting(E_ALL);
+            ini_set('display_errors', 0);
+        break;
+        default:
+            exit('The application environment is not set correctly.');
 	}
 }
 
@@ -56,7 +57,7 @@ if (defined('ENVIRONMENT'))
  * as this file.
  *
  */
-	$system_path = '../ci213';
+	$system_path = '../ci202';
 
 /*
  *---------------------------------------------------------------
@@ -175,6 +176,7 @@ if (defined('ENVIRONMENT'))
 	// Name of the "system folder"
 	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
 
+	define('COMMONPATH', str_replace("\\", "/", FCPATH).'common/');
 
 	// The path to the "application" folder
 	if (is_dir($application_folder))

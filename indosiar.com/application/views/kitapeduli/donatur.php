@@ -20,8 +20,8 @@ $this->session->set_userdata('kategori',$kategori);
 <p>&nbsp;</p>
 <div class="csr_subtitle">PENCARIAN</div>
 <div style="width:49%;float:left;">
-    <form action="<?php site_url('kitapeduli/donatur')?>" method=post name="form1">
-    <input type="hidden" name="kategori" value="<?php $kategori?>" />
+    <form action="<?php echo site_url('kitapeduli/donatur'); ?>" method=post name="form1">
+    <input type="hidden" name="kategori" value="<?php echo $kategori; ?>" />
     <input type="hidden" name="que" value="1" />
     <table border="0" cellspacing="0" cellpadding="3">
       <tr>
@@ -49,8 +49,8 @@ $this->session->set_userdata('kategori',$kategori);
     </form>
 </div>
 <div style="width:49%;float:right;">
-    <form action="<?php site_url('kitapeduli/donatur')?>" method=post name="form2">
-    <input type="hidden" name="kategori" value="<?php $kategori?>" />
+    <form action="<?php echo site_url('kitapeduli/donatur'); ?>" method=post name="form2">
+    <input type="hidden" name="kategori" value="<?php echo $kategori; ?>" />
     <input type="hidden" name="que" value="2" />
     <table border="0" cellspacing="0" cellpadding="3">
       <tr>
@@ -74,7 +74,7 @@ $this->session->set_userdata('kategori',$kategori);
 <div style="clear:both"></div>
 <br /><br />
 <div class="csr_subtitle">DAFTAR DONATUR</div>
-<?
+<?php
 $batas = 25;
 
 //$page = trim($_REQUEST["page"]);

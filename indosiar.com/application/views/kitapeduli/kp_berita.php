@@ -1,4 +1,4 @@
-<?php php
+<?php
 $batas = 5;
 $segment=4;
 $spage = "";
