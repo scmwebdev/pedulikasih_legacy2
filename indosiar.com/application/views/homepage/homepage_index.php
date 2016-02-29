@@ -2,6 +2,7 @@
 $HTMLPageTitle = "PT. Indosiar Visual Mandiri Memang Untuk Anda | Tv Indonesia";
 $HTMLMetaDescription = "PT. Indosiar Visual Mandiri Memang Untuk Anda | Tv Indonesia";
 $HTMLMetaKeywords = "Indosiar Community";
+$progchange = '';
     
 include (APPPATH."views/inc_header.php");
 ?>
