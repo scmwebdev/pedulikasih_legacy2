@@ -115,8 +115,8 @@ if ($que == 1) {
     $jenis=$this->session->userdata('jenis');
   }
   
-  $qword = mysqli_real_escape_string($qword);
-  $jenis = mysqli_real_escape_string($jenis);
+  $qword = mysql_real_escape_string($qword);
+  $jenis = mysql_real_escape_string($jenis);
 
   if ($jenis == "kota") {
     $sqltot = "select id from kitapeduli_bca where kategori='$kategori' and kota like '%$qword%'";
