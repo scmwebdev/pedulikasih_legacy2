@@ -77,7 +77,7 @@ echo $this->banner_model->getBanner(320);
 <div style="height:50px">&nbsp;</div>
 <div class="header">
 	<div style="clear:both">
-		<div style="float:left;width:150px;"><a href="<?php site_url()?>"><img src="/img/logo-v12-new.png" alt="indosiar dot com" border="0" /></a></div>
+		<div style="float:left;width:150px;"><a href="<?= site_url()?>"><img src="/img/logo-v12-new.png" alt="indosiar dot com" border="0" /></a></div>
 		<div style="float:right;width:750px;margin:20px 10px 0 0;text-align:right;"><?php $this->banner_model->getBanner(322)?></div>
 	</div>
 </div>
