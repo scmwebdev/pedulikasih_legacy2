@@ -77,14 +77,14 @@ echo $this->banner_model->getBanner(320);
 <div style="height:50px">&nbsp;</div>
 <div class="header">
 	<div style="clear:both">
-		<div style="float:left;width:150px;"><a href="<?= site_url()?>"><img src="/img/logo-v12-new.png" alt="indosiar dot com" border="0" /></a></div>
+		<div style="float:left;width:150px;"><a href="<?= site_url()?>"><img src="<?= base_url() ?>/img/logo-v12-new.png" alt="indosiar dot com" border="0" /></a></div>
 		<div style="float:right;width:750px;margin:20px 10px 0 0;text-align:right;"><?php $this->banner_model->getBanner(322)?></div>
 	</div>
 </div>
 <div class="header-menu" style="background:#EFEFEF">
 	<a href="http://www.indosiar.com">HOME</a> | 
-	<a href="<?= site_url('pedulikasih') ?>">PEDULI KASIH</a> |
-	<a href="<?= site_url('kitapeduli') ?>">KITA PEDULI</a>
+	<a href="<?= base_url('pedulikasih') ?>">PEDULI KASIH</a> |
+	<a href="<?= base_url('kitapeduli') ?>">KITA PEDULI</a>
 </div>
 <div class="container">
 <?php 

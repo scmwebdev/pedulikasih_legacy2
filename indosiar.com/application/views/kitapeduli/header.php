@@ -19,7 +19,7 @@ include (APPPATH."views/inc_header.php");
     <div style="clear:both"></div>
 </div>
 <div style="float:left;width:200px;margin-right:20px;">
-	<div style="margin-bottom:15px"><a href="/kitapeduli"><img src="/assets/images/indosiarpeduli_logo.jpg" alt="Kita Peduli indosiar" title="Kita Peduli indosiar" border="0"  style="width:100%"/></a></div>
+	<div style="margin-bottom:15px"><a href="/kitapeduli"><img src="<?= base_url() ?>assets/images/indosiarpeduli_logo.jpg" alt="Kita Peduli indosiar" title="Kita Peduli indosiar" border="0"  style="width:100%"/></a></div>
 	<?= $pk_menu?>
 	<br/>
 </div>
