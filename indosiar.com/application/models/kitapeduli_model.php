@@ -208,7 +208,6 @@ class Kitapeduli_model extends CI_Model {
 			}
 		}
 		$queryx->free_result();
-
 		$str .= '</div>
 		<script>
 		function wmenuShow(div) {

@@ -23,11 +23,5 @@ include (APPPATH."views/inc_header.php");
 	<div style="margin-bottom:15px"><a href="/pedulikasih"><img src="/assets/images/pedulikasih_logo.png" alt="peduli kasih indosiar" title="peduli kasih indosiar" border="0"/></a></div>
 	<?=$pk_menu?>
 	<br/>
-    <div class="csr_programbox">
-        <div style="text-align:center;"><a href="<?=site_url('kitapeduli')?>"><img src="http://static.indosiar.com/images/kitapeduli.jpg" width="100" border="0" alt="Kita Peduli" title="Program Kita Peduli INDOSIAR" /></a></div>
-        <div class="csr_clickhere"><a href="<?=site_url('kitapeduli')?>">click here</a></div>
-        <div style="text-align:center"><a href="<?=site_url('pedulikomunitas')?>"><img src="/assets/images/pedulikomunitas_logo.jpg" width="100" border="0" alt="Peduli Komunitas" title="Program Peduli Komunitas INDOSIAR" /></a></div>
-        <div class="csr_clickhere" style="margin-bottom:0px;"><a href="<?=site_url('pedulikomunitas')?>">click here</a></div>
-    </div>
 </div>
 <div style="float:right;width:700px;">

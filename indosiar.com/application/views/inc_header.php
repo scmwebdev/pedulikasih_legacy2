@@ -76,29 +76,15 @@ echo $this->banner_model->getBanner(320);
 </div>
 <div style="height:50px">&nbsp;</div>
 <div class="header">
-	<div style="float:left;width:600px;margin-top:5px;margin-left:10px;">
-		<table cellpadding="0" cellspacing="0">
-			<tr>
-				<td><a href="<?php site_url()?>">HOME</a> | <a href="<?php site_url('berita')?>">BERITA</a> | <a href="<?php site_url('info-untuk-anda')?>">INFO UNTUK ANDA</a> | <a href="http://tv.liputan6.com/watch/indosiar" target="_blank"><span style="color:#006600;text-decoration:blink;">LIVE STREAMING</span></a> | <a href="<?php site_url('lowongan')?>"><span style="color: #FF0000">LOWONGAN</span></a></td>
-				<td><div style="margin:0 5px"><a href="<?php site_url('rss')?>"><img src="/img/rss.gif" heigh="10" border="0"></a></div></td>
-				<td><div class="g-plusone" data-size="small" data-annotation="none"></div></td>
-			</tr>
-		</table>
-	</div>
-	<div style="float:right;width:300px;margin-top:5px;">
-	  <form action="/search" method="post" name="search_form" id="search_form" onsubmit="if(document.search_form.qword.value=='Search'){alert('No Keyword');document.search_form.qword.focus();return false;}" >
-	    <input type="hidden" name="doSearch" value="true"/>
-	    <input type="image" name="bt_ok" id="bt_ok" src="/img/search_button.gif" />
-	    <input name="qword" id="keyword" type="text" value="Search" onfocus="if(this.value=='Search') this.value='';" onblur="if(this.value=='') this.value='Search';" size="25" maxlength="255" />
-	  </form>
-	</div>
 	<div style="clear:both">
 		<div style="float:left;width:150px;"><a href="<?php site_url()?>"><img src="/img/logo-v12-new.png" alt="indosiar dot com" border="0" /></a></div>
 		<div style="float:right;width:750px;margin:20px 10px 0 0;text-align:right;"><?php $this->banner_model->getBanner(322)?></div>
 	</div>
 </div>
 <div class="header-menu" style="background:#EFEFEF">
-    <!-- <a href="<?php site_url('fokus')?>">FOKUS</a> | <a href="<?php site_url('patroli')?>">PATROLI</a> | <a href="<?php site_url('ragam')?>">RAGAM</a> | <a href="<?php site_url('gossip')?>">GOSSIP</a> | <a href="<?php site_url('sinopsis')?>">SINOPSIS</a> | <span class="header-menu-other"><a href="<?php site_url('daua')?>">RESPOND ONLINE</a> |  --><a href="<?php site_url('indosiarpeduli')?>">INDOSIAR PEDULI</a> <!-- | <a href="<?php site_url('corporate')?>">CORPORATE INFO</a></span> -->
+	<a href="http://www.indosiar.com">HOME</a> | 
+	<a href="<?= site_url('pedulikasih') ?>">PEDULI KASIH</a> |
+	<a href="<?= site_url('kitapeduli') ?>">KITA PEDULI</a>
 </div>
 <div class="container">
 <?php 

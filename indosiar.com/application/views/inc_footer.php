@@ -1,12 +1,7 @@
 	<div style="clear:both"></div>
 </div>
 <div class="footer" style="clear:both">
-	<a href="/">HOME</a> | 
-	<a href="http://m.indosiar.com">MOBILE VERSION</a> | 
-	<a href="/contact">CONTACT US</a> | 
-	<a href="/sitemap">SITE MAP</a> | 
-	<a href="http://webmail.indosiar.com" target="_blank">INTERNAL MAIL</a><br />
-	Copyright &copy; 2009 - 2013 PT INDOSIAR VISUAL MANDIRI
+	Copyright &copy; 2009 - 2016 PT INDOSIAR VISUAL MANDIRI
 </div>
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -42,9 +37,9 @@ ivmandroidRedirect.init({
     alertFrequency: "once"
 }).redirectPage();
 </script>
-	php
+<?php
 if (isset($JSFooter)) echo $JSFooter;
 ?>
-<!--<?=$this->benchmark->elapsed_time();?> sec - <?=$this->benchmark->memory_usage();?>-->
+
 </body>
 </html>

@@ -74,6 +74,7 @@ $this->session->set_userdata('kategori',$kategori);
 <div style="clear:both"></div>
 <br /><br />
 <div class="csr_subtitle">DAFTAR DONATUR</div>
+
 <?php 
 $batas = 25;
 
@@ -162,8 +163,6 @@ $segment=4;
 if ($totrecord > 0) {
   $this->session->set_userdata('kategori',$kategori); 
   echo $this->pedulikasih_model->showDonatur($iNum,$sql,$totrecord,$batas,$segment,$totpenyumbang);
-}
+} 
 
-
-include (APPPATH."views/pedulikasih/footer.php");
-?>
+include (APPPATH."views/pedulikasih/footer.php"); ?>
