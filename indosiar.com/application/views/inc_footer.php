@@ -21,7 +21,7 @@ var cimg = 0;var cwi =150;var che =30;
 </script>
 <script type="text/javascript" language="javascript" src="http://s10.histats.com/js9.js"></script>
 <noscript><img src="http://s4.histats.com/stats/0.gif?140814&1" alt="counter create hit" border="0"></noscript>
-<script type="text/javascript" src=<?= base_url(); ?>"/assets/js/fb.js?v1"></script>
+<script type="text/javascript" src="<?= base_url(); ?>assets/js/fb.js?v1"></script>
 <script type="text/javascript">
 (function() {
   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
@@ -30,7 +30,7 @@ var cimg = 0;var cwi =150;var che =30;
 })();
 </script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<script type="text/javascript" src=<?= base_url(); ?>"/assets/js/ivmandroid_redirect.js"></script>
+<script type="text/javascript" src="<?= base_url(); ?>assets/js/ivmandroid_redirect.js"></script>
 <script type="text/javascript">
 ivmandroidRedirect.init({
     url: "http://m.indosiar.com/androidapp",

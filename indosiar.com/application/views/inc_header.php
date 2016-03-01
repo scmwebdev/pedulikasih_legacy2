@@ -27,10 +27,10 @@ if (isset($HTMLCanonical) && $HTMLCanonical != site_url($_SERVER['REQUEST_URI'])
 ?>
 <link rel="SHORTCUT ICON" type="image/x-icon" href="/favicon.ico" />
 <link rel="alternate" type="application/rss+xml" title="Indosiar" href="<?= base_url()?>/rss" />
-<link rel="stylesheet" href="<?= base_url(); ?>/css/v09.css?v2" type="text/css">
-<link rel="stylesheet" href="<?= base_url(); ?>/assets/css/fb.css?v1" />
-<script type="text/javascript" src="<?= base_url(); ?>/js/jquery.js"></script>
-<script type="text/javascript" src="<?= base_url(); ?>/js/jquery.corner.js"></script>
+<link rel="stylesheet" href="<?= base_url(); ?>css/v09.css?v2" type="text/css">
+<link rel="stylesheet" href="<?= base_url(); ?>assets/css/fb.css?v1" />
+<script type="text/javascript" src="<?= base_url(); ?>js/jquery.js"></script>
+<script type="text/javascript" src="<?= base_url(); ?>js/jquery.corner.js"></script>
 <script type="text/javascript">
 $(function(){
     $('div.RoundedBox5pxBorder').wrap('<div class="RoundedBoxOuter"></div>');
