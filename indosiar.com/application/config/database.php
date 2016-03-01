@@ -1,10 +1,13 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+include (BASEPATH.'../env.php');
+
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = "localhost";
-$db['default']['username'] = "root";
-$db['default']['password'] = "root";
+$db['default']['hostname'] = $env_config['db_host'];
+$db['default']['username'] = $env_config['db_user'];
+$db['default']['password'] = $env_config['db_pass'];
 $db['default']['database'] = "indosiar_www";
 $db['default']['dbdriver'] = "mysql";
 $db['default']['dbprefix'] = '';
@@ -18,10 +21,10 @@ $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = FALSE;
 $db['default']['stricton'] = FALSE;
 
-$db['dbwrite']['hostname'] = "localhost";
-$db['dbwrite']['username'] = "root";
-$db['dbwrite']['password'] = "root";
-$db['dbwrite']['database'] = "indosiar_www";
+$db['dbwrite']['hostname'] = $env_config['db_host'];
+$db['dbwrite']['username'] = $env_config['db_user'];
+$db['dbwrite']['password'] = $env_config['db_pass'];
+$db['dbwrite']['database'] = "indosiar_www"; 
 $db['dbwrite']['dbdriver'] = "mysql";
 $db['dbwrite']['dbprefix'] = '';
 $db['dbwrite']['pconnect'] = FALSE;

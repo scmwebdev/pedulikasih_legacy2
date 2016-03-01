@@ -1,6 +1,9 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+include (BASEPATH.'../env.php');
+
 //$config['base_url']	= 'http://www.indosiar.com';
-$config['base_url']	= 'http://localhost/index.php';
+$config['base_url']	= $env_config['host'];
 $config['index_page'] = '';
 $config['uri_protocol']	= 'AUTO';
 $config['url_suffix'] = '';

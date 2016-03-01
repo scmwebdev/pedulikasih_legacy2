@@ -1,5 +1,8 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+
+include (BASEPATH.'../env.php');
+
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -15,7 +18,7 @@
 |
 */
 // $config['base_url']	= 'http://cms.indosiar.com/';
-$config['base_url']	= 'http://localhost/index.php/';
+$config['base_url']	= $env_config['host'];
 
 /*
 |--------------------------------------------------------------------------
