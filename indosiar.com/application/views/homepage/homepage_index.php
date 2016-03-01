@@ -14,7 +14,7 @@ include (APPPATH."views/inc_header.php");
       <h2>Indosiar Peduli</h2>
     </a>
   </div>
-  <div style="width:200px;margin:100px 20px;display:inline-block; text-align: center;">
+  <div style="width:200px;margin:100px 20px;display:inline-block; text-align: center";>
     <a href="/pedulikasih">
       <img src="/assets/images/pedulikasih_logo.png" alt="peduli kasih indosiar" title="peduli kasih indosiar" border="0"/>
       <h2>Peduli Kasih</h2>

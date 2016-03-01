@@ -2,7 +2,7 @@
 $no_fb_timeline         = true;
 include (APPPATH."views/inc_header.php");
 ?>
-<link rel="stylesheet" href="/assets/css/csr.css" type="text/css">
+<link rel="stylesheet" href="<?= base_url(); ?>/assets/css/csr.css" type="text/css">
 <div class="social-row">
     <ul class="social" id="css3-social">
         <li><span>Follow Us :<span></li>

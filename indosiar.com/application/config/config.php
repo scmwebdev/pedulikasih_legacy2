@@ -2,7 +2,7 @@
 
 include (BASEPATH.'../env.php');
 
-//$config['base_url']	= 'http://www.indosiar.com';
+// $config['base_url']	= 'http://www.indosiar.com';
 $config['base_url']	= $env_config['host'];
 $config['index_page'] = '';
 $config['uri_protocol']	= 'AUTO';

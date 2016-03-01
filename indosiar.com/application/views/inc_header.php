@@ -26,11 +26,11 @@ $curURL = (isset($HTMLCanonical)) ? $HTMLCanonical : 'http://'.$_SERVER['SERVER_
 if (isset($HTMLCanonical) && $HTMLCanonical != site_url($_SERVER['REQUEST_URI'])) echo '<link rel="canonical" href="'.$HTMLCanonical.'" />'."\r\n";
 ?>
 <link rel="SHORTCUT ICON" type="image/x-icon" href="/favicon.ico" />
-<link rel="alternate" type="application/rss+xml" title="Indosiar" href="<?php site_url()?>rss" />
-<link rel="stylesheet" href="/css/v09.css?v2" type="text/css">
-<link rel="stylesheet" href="/assets/css/fb.css?v1" />
-<script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript" src="/js/jquery.corner.js"></script>
+<link rel="alternate" type="application/rss+xml" title="Indosiar" href="<?= base_url()?>/rss" />
+<link rel="stylesheet" href="<?= base_url(); ?>/css/v09.css?v2" type="text/css">
+<link rel="stylesheet" href="<?= base_url(); ?>/assets/css/fb.css?v1" />
+<script type="text/javascript" src="<?= base_url(); ?>/js/jquery.js"></script>
+<script type="text/javascript" src="<?= base_url(); ?>/js/jquery.corner.js"></script>
 <script type="text/javascript">
 $(function(){
     $('div.RoundedBox5pxBorder').wrap('<div class="RoundedBoxOuter"></div>');
@@ -45,19 +45,19 @@ $(function(){
     $("div.RoundedBoxTLBLBR5px").corner("tl 5px").corner("bl 5px").corner("br 5px");
 });
 
-var base_url 		= '<?php base_url()?>';
-var cur_url			= '<?php $curURL?>';
-var page_title	    = '<?php $HTMLPageTitle?>';
-var page_desc		= '<?php $HTMLMetaDescription?>';
-var page_image	    = '<?php $HTMLPageImage?>';
+var base_url 		= '<?= base_url()?>';
+var cur_url			= '<?= $curURL?>';
+var page_title	    = '<?= $HTMLPageTitle?>';
+var page_desc		= '<?= $HTMLMetaDescription?>';
+var page_image	    = '<?= $HTMLPageImage?>';
 var page_id	        = <?php (isset($page_id)) ? $page_id : '0'?>;
 var perms 			= ['email','publish_actions','publish_stream','read_stream','read_friendlists','user_birthday','user_likes','user_online_presence','user_actions.news','user_actions.video'];
 var auth_url 		= 'https://www.facebook.com/dialog/oauth?client_id=209188075876033&redirect_uri=<?php urlencode($curURL)?>&scope=' + perms.join(',') + '&response_type=token';
 var fbAppID         = '209188075876033';
 var fbUserID 		= '';
 var fbUserToken	    = '';
-var isNewsReads	    = <?php (isset($isNewsReads)) ? 'true' : 'false'?>;
-var isVideoWatches	= <?php (isset($isVideoWatches)) ? 'true' : 'false'?>;
+var isNewsReads	    = <?= (isset($isNewsReads)) ? 'true' : 'false'?>;
+var isVideoWatches	= <?= (isset($isVideoWatches)) ? 'true' : 'false'?>;
 </script>
 </head>
 <body>
