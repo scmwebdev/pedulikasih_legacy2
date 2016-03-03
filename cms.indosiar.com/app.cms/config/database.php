@@ -45,9 +45,9 @@ $db['sphinx']['autoinit'] = TRUE;
 $db['sphinx']['stricton'] = FALSE;
 
 # set db write for thevoice_tools
-$db['db_thevoiceindonesia_tools_write']['hostname'] = $env_config['db_host'];
-$db['db_thevoiceindonesia_tools_write']['username'] = $env_config['db_name'];
-$db['db_thevoiceindonesia_tools_write']['password'] = $env_config['db_pass'];
+$db['db_thevoiceindonesia_tools_write']['username'] = "thevoice";
+$db['db_thevoiceindonesia_tools_write']['password'] = "gr0upV0cal";
+$db['db_thevoiceindonesia_tools_write']['database'] = "thevoiceindonesia_tools";
 $db['db_thevoiceindonesia_tools_write']['database'] = "thevoiceindonesia_tools";
 $db['db_thevoiceindonesia_tools_write']['dbdriver'] = "mysql";
 $db['db_thevoiceindonesia_tools_write']['dbprefix'] = '';
@@ -62,9 +62,10 @@ $db['db_thevoiceindonesia_tools_write']['autoinit'] = FALSE;
 $db['db_thevoiceindonesia_tools_write']['stricton'] = FALSE;
 
 # set db write for thevoice_www
-$db['db_thevoiceindonesia_www_write']['hostname'] = $env_config['db_host'];
-$db['db_thevoiceindonesia_www_write']['username'] = $env_config['db_name'];
-$db['db_thevoiceindonesia_www_write']['password'] = $env_config['db_pass'];
+
+$db['db_thevoiceindonesia_www_write']['username'] = "thevoice";
+$db['db_thevoiceindonesia_www_write']['password'] = "gr0upV0cal";
+$db['db_thevoiceindonesia_www_write']['database'] = "thevoiceindonesia_www";
 $db['db_thevoiceindonesia_www_write']['database'] = "thevoiceindonesia_www";
 $db['db_thevoiceindonesia_www_write']['dbdriver'] = "mysql";
 $db['db_thevoiceindonesia_www_write']['dbprefix'] = '';
