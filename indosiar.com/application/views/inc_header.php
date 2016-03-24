@@ -84,7 +84,7 @@ echo $this->banner_model->getBanner(320);
 <div class="header-menu" style="background:#EFEFEF">
 	<a href="http://www.indosiar.com">HOME</a> | 
 	<a href="<?= base_url('pedulikasih') ?>">PEDULI KASIH</a> |
-	<a href="<?= base_url('kitapeduli') ?>">KITA PEDULI</a>
+	<!-- <a href="<?= base_url('kitapeduli') ?>">KITA PEDULI</a> -->
 </div>
 <div class="container">
 <?php 
