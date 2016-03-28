@@ -19,7 +19,9 @@ include (APPPATH."views/inc_header.php");
     <div style="clear:both"></div>
 </div>
 <div style="float:left;width:200px;margin-right:20px;">
-	<div style="margin-bottom:15px"><a href="/pedulikasih"><img src="<?php base_url() ?>assets/images/pedulikasih_logo.png" alt="peduli kasih indosiar" title="peduli kasih indosiar" border="0"/></a></div>
+	<div style="margin-bottom:15px"><a href="/pedulikasih">
+        <!-- <img src="<?php base_url() ?>assets/images/pedulikasih_logo.png" alt="peduli kasih indosiar" title="peduli kasih indosiar" border="0"/></a></div> -->
+        <img src="http://indosiar.com:8080/assets/images/pedulikasih_logo.png" alt="peduli kasih indosiar" title="peduli kasih indosiar" border="0"/></a></div> 
 	<?php $pk_menu ?>
 	<br/>
 </div>
