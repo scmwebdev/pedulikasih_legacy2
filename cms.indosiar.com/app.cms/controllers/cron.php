@@ -46,7 +46,7 @@ class Cron extends CI_Controller {
 		$myUsername         = $jenis.'.bca';
 		$myPassword         = 'pedulikasih1234';
 		//$myPassword         = 'ivm2012';
-		$mySavePath         = '/home/dodo/projects/data/bca/'.$jenis.'/';
+		$mySavePath         = '/home/ec2-user/data/bca/'.$jenis.'/';
 		$myTrustedDomain    = array('indosiar.com','bca.co.id');
 
 		$message                          = array();
