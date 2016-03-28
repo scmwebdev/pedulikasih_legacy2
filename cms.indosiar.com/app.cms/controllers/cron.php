@@ -5,6 +5,7 @@ class Cron extends CI_Controller {
 	public function index(){}
 	
 	public function pedulikasih(){
+		// $this->_connect('pedulikasih');
 	    $this->_fetchmail('pedulikasih');
 	}
 	
@@ -12,39 +13,40 @@ class Cron extends CI_Controller {
 	    $this->_fetchmail('kitapeduli');
 	}
 
-        private function _connect($jenis) {
-            $myServerName   = "{webmail.indosiar.com:143/imap/novalidate-cert}INBOX";
-            $myUsername     = $jenis.'.bca';
-            $myPassword     = 'Init1234';
-            $tryCnt         = 0;
+    private function _connect($jenis) {
+        $myServerName   = "{webmail.indosiar.com:143/imap/novalidate-cert}INBOX";
+        $myUsername     = $jenis.'.bca';
+        $myPassword     = 'pedulikasih1234';
+        $tryCnt         = 0;
 
-            while(!is_resource($this->mbox)){
-              $this->mbox = imap_open($myServerName, $myUsername, $myPassword,
-                                  NULL, 1, array("DISABLE_AUTHENTICATOR" => "GSSAPI"));
-              $tryCnt ++;
+        $mbox = NULL;
 
-              if(!is_resource($this->mbox)){
-                $this->mbox = imap_open($myServerName, $myUsername, $myPassword,
-                                    NULL, 1, array('DISABLE_AUTHENTICATOR' => 'PLAIN'));
-                $tryCnt ++;
-              }
+        while(!is_resource($mbox)){
+          $mbox = imap_open($myServerName, $myUsername, $myPassword,
+                              NULL, 1, array("DISABLE_AUTHENTICATOR" => "GSSAPI"));
+          $tryCnt ++;
 
-              if($tryCnt > 20){
-                echo "Cannot Connect To Exchange Server:<BR>";
-                die(var_dump(imap_errors()));
-              }
-            }
+          if(!is_resource($mbox)){
+            $mbox = imap_open($myServerName, $myUsername, $myPassword, NULL, 1, array('DISABLE_AUTHENTICATOR' => 'PLAIN'));
+            $tryCnt ++;
+          }
+
+          if($tryCnt > 20){
+            echo "Cannot Connect To Exchange Server:<BR>";
+            die(var_dump(imap_errors()));
+          }
         }
+    }
 	
 	private function _fetchmail($jenis){
-        	$this->load->library('PHPExcel');
+    	$this->load->library('PHPExcel');
 
 		//$myServerName       = "{webmail.indosiar.com/imap:1143}INBOX";
 		$myServerName 		= "{webmail.indosiar.com:143/imap/novalidate-cert}INBOX";
 		$myUsername         = $jenis.'.bca';
-		$myPassword         = 'Init1234';
+		$myPassword         = 'pedulikasih1234';
 		//$myPassword         = 'ivm2012';
-		$mySavePath         = '/data/bca/'.$jenis.'/';
+		$mySavePath         = '/home/ec2-user/data/bca/'.$jenis.'/';
 		$myTrustedDomain    = array('indosiar.com','bca.co.id');
 
 		$message                          = array();
@@ -65,6 +67,10 @@ class Cron extends CI_Controller {
 		//$mbox = $this->mbox;
 
 		$mbox = imap_open($myServerName, $myUsername, $myPassword, NULL, 1, array("DISABLE_AUTHENTICATOR" => "GSSAPI")) or die("Could not open Mailbox - try again later!\n".print_r(imap_errors()));
+
+		$body = imap_body($mbox, 1);
+		var_dump($body);
+
 		//$mbox = imap_open($myServerName, $myUsername, $myPassword) or die("Could not open Mailbox - try again later!");
 
 		/*if (count(imap_errors())) {
@@ -73,10 +79,12 @@ class Cron extends CI_Controller {
 			die;
 		}*/
 
-		if ($hdr = imap_check($mbox)) 
-            		$msgCount = $hdr->Nmsgs;
-		else
+		if ($hdr = imap_check($mbox))  {
+    		$msgCount = $hdr->Nmsgs;
+		}
+		else {
 			die("imap_check error");
+		}
 	
 		$overview   = imap_fetch_overview($mbox,"1:$msgCount",0);
 		$size       = sizeof($overview); 
@@ -142,7 +150,7 @@ class Cron extends CI_Controller {
 						$data   = "";
 						$mege   = imap_fetchbody($mbox,$msgno,$fpos);
 
-						$sql = "SELECT log_id FROM ".$jenis."_bca_log WHERE log_from='".mysqli_real_escape_string($from)."' AND log_subject='".mysqli_real_escape_string($subject)."' AND log_date='$date'";
+						$sql = "SELECT log_id FROM ".$jenis."_bca_log WHERE log_from='".$from."' AND log_subject='".$subject."' AND log_date='$date'";
 						$query = $this->db->query($sql);
 						if ($query->num_rows() > 0) {
 							$query->free_result();
@@ -167,6 +175,7 @@ class Cron extends CI_Controller {
     							$mySaveFilenameCSV  = 'bca_'.$myFormat.'.csv';
     							
     							$fp     = fopen($mySavePath.$mySaveFilename,"w");
+
     							if (!$fp) die("unable to create file: ".$mySavePath.$mySaveFilename);
     							$data   = $this->_getdecodevalue($mege,$part->type);
     							fputs($fp,$data);
@@ -217,7 +226,7 @@ class Cron extends CI_Controller {
     			      						}*/
 			      							    
 			      							    
-			      							$sql = "INSERT INTO ".$jenis."_bca (ID2,KOTA,NAMA,NILAI,TANGGAL,KATEGORI) VALUES ($ID2,'".mysqli_real_escape_string($KOTA)."','".mysqli_real_escape_string($NAMA)."','$NILAI','$TANGGAL','person')";
+			      							$sql = "INSERT INTO ".$jenis."_bca (ID2,KOTA,NAMA,NILAI,TANGGAL,KATEGORI) VALUES ($ID2,'".$KOTA."','".$NAMA."','$NILAI','$TANGGAL','person')";
                                             $this->db->simple_query($sql);
                                             
 											echo "$ID2, $KOTA, $NAMA, $NILAI, $TANGGAL \r\n";
@@ -227,7 +236,7 @@ class Cron extends CI_Controller {
 			      					}
     			      			}
     			      			
-    		      				$sql = "INSERT INTO ".$jenis."_bca_log(log_id,log_from,log_subject,log_date) VALUES('','".mysqli_real_escape_string($from)."','".mysqli_real_escape_string($subject)."','$date')";
+    		      				$sql = "INSERT INTO ".$jenis."_bca_log(log_id,log_from,log_subject,log_date) VALUES('','".$from."','".$subject."','$date')";
     		      				$this->db->simple_query($sql);
 							}
 						}
