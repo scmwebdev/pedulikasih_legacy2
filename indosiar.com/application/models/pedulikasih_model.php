@@ -180,8 +180,8 @@ class Pedulikasih_model extends CI_Model {
 		if ($queryx->num_rows() > 0) {			
 			foreach ($queryx->result_array() as $rowx) {
 				$link = '/pedulikasih/'.$rowx['judul_url'];
-				// if ($rowx['pdf'] != "") $link = URL_STATIC.'pdf/pedulikasih/'.$rowx['pdf'];
-				if ($rowx['pdf'] != "") $link = base_url() .'assets/pdf/pedulikasih/'.$rowx['pdf'];
+				if ($rowx['pdf'] != "") $link = URL_STATIC.'pdf/pedulikasih/'.$rowx['pdf'];
+				// if ($rowx['pdf'] != "") $link = base_url() .'assets/pdf/pedulikasih/'.$rowx['pdf'];
 				if ($rowx['url'] != "") $link = '/pedulikasih/'.$rowx['url'];
 				
 				$css_sel = ($link == $site_url) ? ' wmenusel' : '';
