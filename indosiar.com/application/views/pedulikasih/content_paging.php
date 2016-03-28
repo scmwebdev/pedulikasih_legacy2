@@ -15,9 +15,11 @@ if ($pk_totrecord > 0) {
 	
 	foreach($pk_data as $row) {
 		if ($pk_kategori == "audit" && $row['pdf'] != "")
-			echo '<li><h2><a href="'.URL_STATIC.'pdf/pedulikasih/content/'.$row['pdf'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
+			// echo '<li><h2><a href="'.URL_STATIC.'pdf/pedulikasih/content/'.$row['pdf'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
+			echo '<li><h2><a href="'.base_url().'assets/pdf/pedulikasih/'.$row['pdf'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
 		else
-			echo '<li><h2><a href="/pedulikasih/'.$row['kategori'].'/'.$row['judul_url'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
+			// echo '<li><h2><a href="/pedulikasih/'.$row['kategori'].'/'.$row['judul_url'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
+			echo '<li><h2><a href="'.base_url().'assets/pdf/pedulikasih/'.$row['judul_url'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
 	}
 	
 	echo '</ul></div>';
