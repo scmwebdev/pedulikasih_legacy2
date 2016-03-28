@@ -22,7 +22,7 @@ include (APPPATH."views/inc_header.php");
 	<div style="margin-bottom:15px"><a href="/pedulikasih">
         <!-- <img src="<?php base_url() ?>assets/images/pedulikasih_logo.png" alt="peduli kasih indosiar" title="peduli kasih indosiar" border="0"/></a></div> -->
         <img src="http://indosiar.com:8080/assets/images/pedulikasih_logo.png" alt="peduli kasih indosiar" title="peduli kasih indosiar" border="0"/></a></div> 
-	<?php $pk_menu ?>
+	<?php echo $pk_menu ?>
 	<br/>
 </div>
 <div style="float:right;width:700px;">

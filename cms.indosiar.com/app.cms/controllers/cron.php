@@ -46,7 +46,7 @@ class Cron extends CI_Controller {
 		$myUsername         = $jenis.'.bca';
 		$myPassword         = 'pedulikasih1234';
 		//$myPassword         = 'ivm2012';
-		$mySavePath         = '/home/ec2-user/data/bca/'.$jenis.'/';
+		$mySavePath         = '/home/dodo/projects/data/bca/'.$jenis.'/';
 		$myTrustedDomain    = array('indosiar.com','bca.co.id');
 
 		$message                          = array();
@@ -62,7 +62,6 @@ class Cron extends CI_Controller {
 		echo "\r\n";
 		echo date ('d-m-Y H:i:s')." -> $jenis is on work!\r\n";
 		echo "\r\n";
-	   
 		//$this->_connect($jenis);
 		//$mbox = $this->mbox;
 
@@ -171,7 +170,7 @@ class Cron extends CI_Controller {
 		      		        if (in_array(strtolower($myDomain), $myTrustedDomain)) {    		      				
     							$myFormat           = str_replace(' ','_',$date);
     							$myFormat           = str_replace(':','_',$myFormat);
-    							$mySaveFilename     = 'bca_'.$myFormat.'.xls';
+    							$mySaveFilenameCSV     = 'bca_'.$myFormat.'.xls';
     							$mySaveFilenameCSV  = 'bca_'.$myFormat.'.csv';
     							
     							$fp     = fopen($mySavePath.$mySaveFilename,"w");
