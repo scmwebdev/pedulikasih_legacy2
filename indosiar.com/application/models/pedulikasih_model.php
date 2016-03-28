@@ -144,7 +144,8 @@ class Pedulikasih_model extends CI_Model {
 			
 			foreach ($queryx->result_array() as $rowx) {
 				$link = '/pedulikasih/'.$rowx['judul_url'];
-				if ($rowx['pdf'] != "") $link = URL_STATIC.'pdf/pedulikasih/'.$rowx['pdf'];
+				// if ($rowx['pdf'] != "") $link = URL_STATIC.'pdf/pedulikasih/'.$rowx['pdf'];
+				if ($rowx['pdf'] != "") $link = base_url() .'assets/pdf/pedulikasih/'.$rowx['pdf'];
 				if ($rowx['url'] != "") $link = '/pedulikasih/'.$rowx['url'];
 				
 				if ($rowx['judul_url'] == "pemohon")
@@ -156,7 +157,8 @@ class Pedulikasih_model extends CI_Model {
 				$queryz = $this->db->query($sqlz);
 				foreach ($queryz->result_array() as $rowz) {
 					$link = '/pedulikasih/'.$rowz['judul_url'];
-					if ($rowz['pdf'] != "") $link = URL_STATIC.'pdf/pedulikasih/'.$rowz['pdf'];
+					// if ($rowz['pdf'] != "") $link = URL_STATIC.'pdf/pedulikasih/'.$rowz['pdf'];
+					if ($rowx['pdf'] != "") $link = base_url() .'assets/pdf/pedulikasih/'.$rowx['pdf'];
 					if ($rowz['url'] != "") $link = '/pedulikasih/'.$rowz['url'];
 					
 					$str .= '<li><a href="'.$link.'">&raquo; '.$rowz['judul_menu'].'</a></li>';
