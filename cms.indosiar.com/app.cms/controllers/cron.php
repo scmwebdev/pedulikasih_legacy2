@@ -46,7 +46,7 @@ class Cron extends CI_Controller {
 		$myUsername         = $jenis.'.bca';
 		$myPassword         = 'pedulikasih1234';
 		//$myPassword         = 'ivm2012';
-		$mySavePath         = '/home/ec2-user/data/bca/'.$jenis.'/';
+		$mySavePath         = '/home/ec2-user/indosiarpeduli/data/bca/'.$jenis.'/';
 		$myTrustedDomain    = array('indosiar.com','bca.co.id');
 
 		$message                          = array();
@@ -170,10 +170,10 @@ class Cron extends CI_Controller {
 		      		        if (in_array(strtolower($myDomain), $myTrustedDomain)) {    		      				
     							$myFormat           = str_replace(' ','_',$date);
     							$myFormat           = str_replace(':','_',$myFormat);
-    							$mySaveFilenameCSV     = 'bca_'.$myFormat.'.xls';
+    							$mySaveFilename     = 'bca_'.$myFormat.'.xls';
     							$mySaveFilenameCSV  = 'bca_'.$myFormat.'.csv';
     							
-    							$fp     = fopen($mySavePath.$mySaveFilename,"w");
+    							$fp     = fopen($mySavePath.$mySaveFilename,"w+");
 
     							if (!$fp) die("unable to create file: ".$mySavePath.$mySaveFilename);
     							$data   = $this->_getdecodevalue($mege,$part->type);
