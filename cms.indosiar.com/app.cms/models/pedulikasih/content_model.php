@@ -11,7 +11,9 @@ class Content_model extends CI_Model {
 				$FILE_MIMES = array('application/pdf', 'application/x-pdf', 'application/acrobat', 'applications/vnd.pdf', 'text/pdf', 'text/x-pdf');
 				$FILE_EXTS  = array('.pdf');
 				
-				$upload_dir = STATIC_PATH.'pdf/pedulikasih/content/';
+				// $upload_dir = STATIC_PATH.'pdf/pedulikasih/content/';
+				$upload_dir = $env_config['home'] . '/indosiar.com/assets/pdf/pedulikasih';
+
 				if (!file_exists($upload_dir)) @mkdir($upload_dir);
 				//$curtime 		= date("YmdHis");
 				

@@ -1,7 +1,11 @@
 <?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
-$config['URL_ROOT']			= "http://www.indosiar.com/";
+
+include(BASEPATH . '../env.php');
+
+// $config['URL_ROOT']			= "http://www.indosiar.com/";
+$config['URL_ROOT']			= $env_config['host'];
 $config['URL_IMG']			= $config['URL_ROOT']."img/";
-$config['URL_IMAGES']		= "http://static.indosiar.com/images/";
+$config['URL_IMAGES']		= $env_config['host'] . "assets/images/";
 $config['URL_VIDEOS']		= "http://static.indosiar.com/video/";
 $config['URL_STATIC']		= "http://static.indosiar.com/";
 $config['URL_JS']			= $config['URL_ROOT']."js/";

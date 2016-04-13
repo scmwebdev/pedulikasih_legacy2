@@ -5,6 +5,7 @@ $HTMLMetaDescription =  substr(str_replace(array("\r","\n"),"",htmlspecialchars(
 $HTMLMetaKeywords =  $pk_kategori;
 
 include (APPPATH."views/pedulikasih/header.php");
+include (BASEPATH.'../env.php');
 
 echo '
 <h1>'.$pk_kategori_judul.'</h1>
@@ -16,10 +17,10 @@ if ($pk_totrecord > 0) {
 	foreach($pk_data as $row) {
 		if ($pk_kategori == "audit" && $row['pdf'] != "")
 			// echo '<li><h2><a href="'.URL_STATIC.'pdf/pedulikasih/content/'.$row['pdf'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
-			echo '<li><h2><a href="'.base_url().'assets/pdf/pedulikasih/'.$row['pdf'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
+			echo '<li><h2><a target="_blank" href="'. $env_config['host'] .'/assets/pdf/pedulikasih/'.$row['pdf'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
 		else
 			// echo '<li><h2><a href="/pedulikasih/'.$row['kategori'].'/'.$row['judul_url'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
-			echo '<li><h2><a href="'.base_url().'assets/pdf/pedulikasih/'.$row['judul_url'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
+			echo '<li><h2><a target="_blank" href="'. $env_config['host'] .'/assets/pdf/pedulikasih/'.$row['judul_url'].'">'.$row['judul'].'</a></h2>'.$row['ringkasan'].'</li>';
 	}
 	
 	echo '</ul></div>';

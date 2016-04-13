@@ -5,6 +5,7 @@ $HTMLMetaDescription =  substr(str_replace(array("\r","\n"),"",htmlspecialchars(
 $HTMLMetaKeywords =  $pk_kategori;
 
 include (APPPATH."views/pedulikasih/header.php");
+include (BASEPATH.'../env.php');
 
 if (count($pk_data) > 0) {
 	echo '
@@ -15,7 +16,8 @@ if (count($pk_data) > 0) {
 			echo '<div class="list-float"><ul>';
 			foreach($pk_list as $row) {
 				if ($pk_kategori == "audit" && $row['pdf'] != "")
-					echo '<li><a href="'.URL_STATIC.'pdf/pedulikasih/content/'.$row['pdf'].'">'.$row['judul'].'</a>'.$row['ringkasan'].'</li>';
+					// echo '<li><a href="'.URL_STATIC.'pdf/pedulikasih/content/'.$row['pdf'].'">'.$row['judul'].'</a>'.$row['ringkasan'].'</li>';
+					echo '<li><a href="'. $env_config['host'] .'/assets/pdf/pedulikasih/'.$row['pdf'].'">'.$row['judul'].'</a>'.$row['ringkasan'].'</li>';
 				else
 					echo '<li><a href="/pedulikasih/'.$row['kategori'].'/'.$row['judul_url'].'">'.$row['judul'].'</a>'.substr($row['ringkasan'],0,200).'...</li>';
 			}

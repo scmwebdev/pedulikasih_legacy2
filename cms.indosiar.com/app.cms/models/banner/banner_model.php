@@ -38,9 +38,9 @@ class Banner_model extends CI_Model {
     function addDatasetup() {				
     		$banner_id=base64_decode($this->input->post('idbanner'));
 				$data = array(
-					          'tanggal'			=>	date("Y-m-d H:i:s"),
-									  'keterangan'		=>	$this->input->post('keterangan'),
-									  'id_banner'		=>	$banner_id
+					        'tanggal'		=>	date("Y-m-d H:i:s"),
+							'keterangan'	=>	$this->input->post('keterangan'),
+							'id_banner'		=>	$banner_id
 				        );
 				$this->db->insert('banner_inc', $data);		
 				$data_id=$this->db->insert_id();
@@ -52,14 +52,14 @@ class Banner_model extends CI_Model {
 				{
 				    $row = $query->row(); 
 						$banjenis				= $row->jenis;
-						$tanggal_akhir	= $row->tanggal_akhir;
+						$tanggal_akhir			= $row->tanggal_akhir;
 						$banner					=	trim($row->banner);
-						$javascript			= trim($row->java_script);		
-						$alternatif			= trim($row->alternatif);
-						$alt						= $row->alt;
-						$link						= trim($row->link);
-				 		$linkalternatif	= trim($row->linkalternatif);
-						$klik						= $row->klik;
+						$javascript				= trim($row->java_script);		
+						$alternatif				= trim($row->alternatif);
+						$alt					= $row->alt;
+						$link					= trim($row->link);
+				 		$linkalternatif			= trim($row->linkalternatif);
+						$klik					= $row->klik;
 						$tinggi					= $row->tinggi;
 						$target					= $row->target;
 						$lebar					= $row->lebar;

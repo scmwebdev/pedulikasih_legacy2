@@ -37,7 +37,8 @@ class Galeri_model extends CI_Model {
 		$FILE_MIMES = array('image/jpeg','image/jpg','image/gif','image/png');
 		$FILE_EXTS  = array('.jpeg','.jpg','.png','.gif');
 		
-		$upload_dir = STATIC_PATH.'images/pedulikasih/gallery/';
+		// $upload_dir = STATIC_PATH.'images/pedulikasih/gallery/';
+		$upload_dir = $env_config['home'] . '/indosiar.com/assets/images/pedulikasih/gallery/';
 		if (!file_exists($upload_dir)) mkdir($upload_dir);
 
 		if ($_FILES['image_file']['name'] != "") {

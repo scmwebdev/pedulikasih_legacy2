@@ -6,3 +6,6 @@ src/
 
 #ignore db_backup folder
 db_backup/
+
+# ignore static
+static.indosiar.com/

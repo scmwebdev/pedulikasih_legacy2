@@ -175,6 +175,9 @@ class Pedulikasih_model extends CI_Model {
     }
 
     function showMenu() {
+
+    	include (BASEPATH . '../env.php');
+
 		$site_url   = '/'.$this->uri->segment(1).'/'.$this->uri->segment(2);
 		$str 		= '<div id="wmenu">';
 		$sqlx 		= "select * from pedulikasih_menu where publish=1 and id_main=0 order by status_sort";
@@ -183,7 +186,7 @@ class Pedulikasih_model extends CI_Model {
 			foreach ($queryx->result_array() as $rowx) {
 				$link = '/pedulikasih/'.$rowx['judul_url'];
 				// if ($rowx['pdf'] != "") $link = URL_STATIC.'pdf/pedulikasih/'.$rowx['pdf'];
-				if ($rowx['pdf'] != "") $link = base_url() .'assets/pdf/pedulikasih/'.$rowx['pdf'];
+				if ($rowx['pdf'] != "") $link = $env_config['host'] .'/assets/pdf/pedulikasih/'.$rowx['pdf'];
 				if ($rowx['url'] != "") $link = '/pedulikasih/'.$rowx['url'];
 				
 				$css_sel = ($link == $site_url) ? ' wmenusel' : '';
@@ -195,7 +198,8 @@ class Pedulikasih_model extends CI_Model {
     				$str .= '<div class="wmenu'.$css_sel.'"><a href="javascript:;" onclick="wmenuShow(\'#wmenu'.$rowx['id'].'\')">'.$rowx['judul_menu'].'</a></div><div id="wmenu'.$rowx['id'].'">';
     				foreach ($queryz->result_array() as $rowz) {
     					$link = '/pedulikasih/'.$rowz['judul_url'];
-    					if ($rowz['pdf'] != "") $link = URL_STATIC.'pdf/pedulikasih/'.$rowz['pdf'];
+    					// if ($rowz['pdf'] != "") $link = URL_STATIC.'pdf/pedulikasih/'.$rowz['pdf'];
+    					if ($rowx['pdf'] != "") $link = $env_config['host'] .'/assets/pdf/pedulikasih/'.$rowx['pdf'];
     					if ($rowz['url'] != "") $link = '/pedulikasih/'.$rowz['url'];
     					
 						$css_sel = ($link == $site_url) ? ' wmenusel' : '';
@@ -324,7 +328,8 @@ class Pedulikasih_model extends CI_Model {
 			$paging.='
 				<div class="ContentJenisList RoundedBox8px">
 					<h2>'.$row->title.'</a></h2>'.
-					str_replace("http://www.indosiar.com/pdf/pedulikasih/","http://static.indosiar.com/pdf/pedulikasih/",$row->introtext).'
+					// str_replace("http://www.indosiar.com/pdf/pedulikasih/","http://static.indosiar.com/pdf/pedulikasih/",$row->introtext).'
+					str_replace("http://www.indosiar.com/pdf/pedulikasih/","http://indosiar.com:8080/assets/pdf/pedulikasih/",$row->introtext).'
 					<div style="clear:both"></div>
 				</div>';		
 			}	
